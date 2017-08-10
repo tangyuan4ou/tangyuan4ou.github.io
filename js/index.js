@@ -56,7 +56,8 @@
       $('.menu-toggle').addClass('on');
       $('.menu-section').addClass('on');
       $('.name').text('');
-      $('.menuContainer').removeClass('menuDown').addClass('menuContainer2');
+      $('.menuContainer').removeClass('menuDown');
+      $('.menuContainer').addClass('menuContainer2');
       $('.list').removeClass("fadeInDown");
       $('.contact').addClass("fadeInUp");
       setTimeout(function(){
@@ -72,7 +73,8 @@
     function() {
       $('.menu-toggle').removeClass('on');
       $('.menu-section').removeClass('on');
-      $('.about').removeClass("fadeInUp").addClass("fadeInDown");
+      $('.about').removeClass("fadeInUp");
+      $('.about').addClass("fadeInDown");
       setTimeout(function(){
         $('.img').removeClass("fadeInUp").addClass("fadeInDown");
       },500);
@@ -84,7 +86,8 @@
         $('.menuContainer').addClass('menuDown');
       },1500);
       setTimeout(function(){
-        $('.menuContainer').removeClass('menuContainer2', 'menuDown');
+        $('.menuContainer').removeClass('menuContainer2');
+        $('.menuContainer').removeClass('menuDown')
         $('.name').text('Hi friend');
       },2000);
     }
