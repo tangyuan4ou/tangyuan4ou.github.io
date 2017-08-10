@@ -191,6 +191,174 @@ table {
 .header .menu .menu-item-link:hover {
   color: #368ccb;
 }
+.menu-section {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  overflow: scroll;
+}
+.nav {
+  margin: 0 auto;
+  width: 1200px;
+}
+.nav .name {
+  display: inline-block;
+  margin-left: 10px;
+  height: 50px;
+  line-height: 50px;
+  color: #000;
+  font-size: 25px;
+}
+.nav .one,
+.nav .two,
+.nav .three {
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  margin: 6px auto;
+  backface-visibility: hidden;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+}
+.nav .menu-toggle {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  cursor: pointer;
+}
+.nav .menu-toggle.on .one {
+  -moz-transform: rotate(45deg) translate(7px, 7px);
+  -webkit-transform: rotate(45deg) translate(7px, 7px);
+  background-color: #fff;
+}
+.nav .menu-toggle.on .two {
+  opacity: 0;
+}
+.nav .menu-toggle.on .three {
+  -moz-transform: rotate(-45deg) translate(8px, -10px);
+  -webkit-transform: rotate(-45deg) translate(8px, -10px);
+  background-color: #fff;
+}
+.nav .menu-section.on {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+}
+.menuContainer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+}
+.menuContainer .menuBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #000;
+  opacity: 0.7;
+}
+.menuContainer .menu {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.menuContainer .menu .about,
+.menuContainer .menu .img,
+.menuContainer .menu .blog,
+.menuContainer .menu .contact {
+  top: 0;
+}
+.menuContainer .menu .list {
+  position: absolute;
+  top: 0;
+  -moz-transform: skewX(-15deg) translateX(-80px);
+  -webkit-transform: skewX(-15deg) translateX(-80px);
+  background: #fff;
+  text-align: center;
+  font-size: 50px;
+  list-style: none;
+  opacity: 0;
+}
+.menuContainer .menu .list a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+.menuContainer .menu .list:nth-child(2n) {
+  background: #000;
+}
+.menuContainer .menu .list:nth-child(2n) a {
+  color: #fff;
+}
+.menuContainer .menu .list:hover {
+  opacity: 1;
+  -moz-transform: skewX(-15deg) translateX(-90px);
+  -webkit-transform: skewX(-15deg) translateX(-90px);
+}
+.menuContainer .menu .fadeInUp {
+  opacity: 0.8;
+  -moz-animation: fadeInUp 2s ease;
+  -webkit-animation: fadeInUp 2s ease;
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -moz-transform: skewX(-15deg) translateX(-100px);
+    -webkit-transform: skewX(-15deg) translateX(-100px);
+  }
+  100% {
+    opacity: 0.8;
+    -moz-transform: skewX(-15deg) translateX(-80px);
+    -webkit-transform: skewX(-15deg) translateX(-80px);
+  }
+}
+.menuContainer .menu .fadeInDown {
+  opacity: 0;
+  -moz-animation: fadeInDown 2s ease;
+  -webkit-animation: fadeInDown 2s ease;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0.8;
+    -moz-transform: skewX(-15deg) translateX(-80px);
+    -webkit-transform: skewX(-15deg) translateX(-80px);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: skewX(-15deg) translateX(-100px);
+    -webkit-transform: skewX(-15deg) translateX(-100px);
+  }
+}
+.menuContainer2 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+}
+.menuDown {
+  opacity: 0;
+  -moz-transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+}
 .post {
   margin: 1em auto;
   padding: 30px 50px;
@@ -256,160 +424,4 @@ table {
   font-size: 100px;
   font-weight: bold;
   color: #000;
-}
-.menu-section {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 50px;
-}
-.nav {
-  margin: 0 auto;
-  width: 1200px;
-}
-.nav .name {
-  display: inline-block;
-  margin-left: 10px;
-  height: 50px;
-  line-height: 50px;
-  color: #000;
-  font-size: 25px;
-}
-.nav .menu-toggle {
-  width: 40px;
-  height: 30px;
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  cursor: pointer;
-}
-.nav .menu-toggle.on .one {
-  -moz-transform: rotate(45deg) translate(7px, 7px);
-  -webkit-transform: rotate(45deg) translate(7px, 7px);
-  background: #fff;
-}
-.nav .menu-toggle.on .two {
-  opacity: 0;
-}
-.nav .menu-toggle.on .three {
-  -moz-transform: rotate(-45deg) translate(8px, -10px);
-  -webkit-transform: rotate(-45deg) translate(8px, -10px);
-  background: #fff;
-}
-.nav .one,
-.nav .two,
-.nav .three {
-  width: 100%;
-  height: 5px;
-  background: #000;
-  margin: 6px auto;
-  backface-visibility: hidden;
-  -moz-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-}
-.nav .menu-section.on {
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-color: #fff;
-  position: absolute;
-}
-.menuContainer {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  width: 100%;
-}
-.menuContainer .menuBg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  background: #000;
-  opacity: 0.7;
-}
-.menuContainer .menu {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow: hidden;
-}
-.menuContainer .menu .about,
-.menuContainer .menu .img,
-.menuContainer .menu .blog,
-.menuContainer .menu .contact {
-  top: 0;
-}
-.menuContainer .menu .list {
-  position: absolute;
-  top: 0;
-  -moz-transform: skewX(-15deg) translateX(-80px);
-  -webkit-transform: skewX(-15deg) translateX(-80px);
-  background: #fff;
-  text-align: center;
-  font-size: 50px;
-  cursor: pointer;
-  list-style: none;
-  opacity: 0;
-}
-.menuContainer .menu .list:nth-child(2n) {
-  background: #000;
-  color: #fff;
-}
-.menuContainer .menu .list:hover {
-  opacity: 1;
-  -moz-transform: skewX(-15deg) translateX(-90px);
-  -webkit-transform: skewX(-15deg) translateX(-90px);
-}
-.menuContainer .menu .fadeInUp {
-  opacity: 0.8;
-  -moz-animation: fadeInUp 2s ease;
-  -webkit-animation: fadeInUp 2s ease;
-}
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -moz-transform: skewX(-15deg) translateX(-100px);
-    -webkit-transform: skewX(-15deg) translateX(-100px);
-  }
-  100% {
-    opacity: 0.8;
-    -moz-transform: skewX(-15deg) translateX(-80px);
-    -webkit-transform: skewX(-15deg) translateX(-80px);
-  }
-}
-.menuContainer .menu .fadeInDown {
-  opacity: 0;
-  -moz-animation: fadeInDown 2s ease;
-  -webkit-animation: fadeInDown 2s ease;
-}
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0.8;
-    -moz-transform: skewX(-15deg) translateX(-80px);
-    -webkit-transform: skewX(-15deg) translateX(-80px);
-  }
-  100% {
-    opacity: 0;
-    -moz-transform: skewX(-15deg) translateX(-100px);
-    -webkit-transform: skewX(-15deg) translateX(-100px);
-  }
-}
-.menuContainer2 {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  width: 100%;
-}
-.menuDown {
-  opacity: 0;
-  -moz-transition-duration: 2s;
-  -webkit-transition-duration: 2s;
 }
