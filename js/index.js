@@ -55,7 +55,7 @@
     function() {
       $('.menu-toggle').addClass('on');
       $('.menu-section').addClass('on');
-      $('.name').text('');
+      $('.name').css('display', 'none');
       $('.menuContainer').removeClass('menuDown');
       $('.menuContainer').addClass('menuContainer2');
       $('.list').removeClass("fadeInDown");
@@ -87,8 +87,8 @@
       },1500);
       setTimeout(function(){
         $('.menuContainer').removeClass('menuContainer2');
-        $('.menuContainer').removeClass('menuDown')
-        $('.name').text('Hi friend');
+        $('.menuContainer').removeClass('menuDown');
+        $('.name').css('display', 'block');
       },2000);
     }
   );
