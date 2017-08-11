@@ -28,7 +28,6 @@
   }
 
   function Circle() {
-    console.log(this);
     var _this = this;
     (function(){
       _this.pos = {};
