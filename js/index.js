@@ -58,6 +58,8 @@
       $('.name').css('display', 'none');
       $('.menuContainer').removeClass('menuDown');
       $('.menuContainer').addClass('menuContainer2');
+      $('.searchContainer').addClass('searchDown');
+
       $('.list').removeClass("fadeInDown");
       $('.contact').addClass("fadeInUp");
       setTimeout(function(){
@@ -73,6 +75,7 @@
     function() {
       $('.menu-toggle').removeClass('on');
       $('.menu-section').removeClass('on');
+
       $('.about').removeClass("fadeInUp");
       $('.about').addClass("fadeInDown");
       setTimeout(function(){
@@ -89,10 +92,21 @@
         $('.menuContainer').removeClass('menuContainer2');
         $('.menuContainer').removeClass('menuDown');
         $('.name').css('display', 'block');
+        $('.searchContainer').removeClass('searchDown');
       },2000);
     }
   );
 
-
+  /*
+    呼入呼出search
+  */
+  $('.searchBtn').toggle(
+    function() {
+      $('.search').css({'width':'350px', 'right': '0px'});
+    },function() {
+      $('.search').css({'width':'0px', 'right': '-5px'});
+      $('.blogList').remove();
+    }
+  );
 
 })();

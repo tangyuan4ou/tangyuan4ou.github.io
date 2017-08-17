@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
     <body>
-        <!---->
         <script src="/js/jquery.js"></script> 
         <div class="error">
             <h1>警告！！</h1>
@@ -65,8 +64,19 @@
       <div class="navBtn three"></div>
     </div>
     <span class="name">Hi friend</span>
+    <div class="searchContainer">
+      <input id="search" class="search" type="text" placeholder="search..." />
+      <button class="searchBtn"><i class="iconfont icon-sousuo"></i></button>
+    </div>
   </div>
 </nav>
+
+<!--
+  菜单栏搜索下拉框
+-->
+<ul class="searchList">
+  
+</ul>
 
 <section class="archiveCntainer">
     <div class="archiveContent">
@@ -136,15 +146,21 @@
     /*
         调整archive页nav样式
     */
+    //菜单按钮
     $('.menu-section').css('position', 'absolute');
     $('.name').text('tangyuan').css('color', '#ffffff');
     $('.navBtn').css('background-color', '#ffffff');
+
+    //search
+    $('.search').css({'background':'#161823', 'color': '#ffffff', 'border-color':'#ffffff'});
+    $('.searchBtn').css({'background':'#161823', 'color': '#ffffff'});
 </script>
 
         </main>
-           
+
         <script src="/js/index.js"></script>
         <script src="/js/canvas.js"></script>
         <script src="/js/archive.js"></script>
+        <script src="/js/search.js"></script>
     </body>
 </html>
