@@ -6,6 +6,7 @@ $.ajax({
     $('.search').keyup(function(){
       var seach = document.getElementById("search")
       $('.blogList').remove();
+      console.log(data)
       data.posts.forEach(function(element) {
        var title_index = element.title.indexOf(seach.value);
        if ( title_index > -1  && seach.value) {

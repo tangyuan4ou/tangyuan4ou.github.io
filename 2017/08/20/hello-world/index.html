@@ -4,10 +4,13 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>TangYuan</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
     <body>
         <script src="/js/jquery.js"></script> 
+        <script src="/js/jquery.particleground.min.js"></script>        
         <div class="error">
             <h1>警告！！</h1>
             <h1>这是警告！！!</h1>
@@ -28,20 +31,126 @@
 
         <main class="main">
             <!--
-    文章详情页
-<artical class="">
-    <div class="post-title">
-        <h2 class="title">Hello World</h2>
-    </div>
-    <div class="post-meta">
-        <span class="post-time">172017-08-20</span>
-    </div>
-    <div class="post-content">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check [documentation]</p>
-
-    </div>
-</artical>
+    首页menu
 -->
+<div class="menuContainer ">
+  <div class="menuBg"></div>
+    <ul class="menu">
+      <li class="list about">
+        <a href="/">Home</a>
+      </li>
+      <li class="list img ">
+        <a href="/about">about</a>
+      </li>
+      <li class="list blog ">
+        <a href="/archives">archives</a>
+      </li>
+      <li class="list contact ">
+        <a href="/about">contact</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<!--
+    菜单栏
+-->
+<nav class="menu-section">
+  <div class="nav">
+    <div class="menu-toggle">
+      <div class="navBtn one"></div>
+      <div class="navBtn two"></div>
+      <div class="navBtn three"></div>
+    </div>
+    <span class="name">Hi friend</span>
+    <div class="searchContainer">
+      <input id="search" class="search" type="text" placeholder="search..." />
+      <button class="searchBtn"><i class="iconfont icon-sousuo"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!--
+  菜单栏搜索下拉框
+-->
+<ul class="searchList">
+  
+</ul>
+
+<artical class="postSwp">
+  <div class="particleground"></div> 
+    <div class="contentBg"></div>
+    <div class="postContainer">
+        <div class="contentleft leftAnim">
+            <div>
+                <p class="postTitle">Hello World</p>
+            </div>
+            <div class="postMeta">
+                <span class="postTime">2017-08-20</span>
+            </div>
+            <div class="postContent">
+                
+                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check [documentation]</p>
+
+            </div>
+        </div>
+        <div class="contentRight rightAnim">
+            <div class="tocContent">
+                
+                    <div>这篇文章没有目录🙈</div>
+                
+            </div>
+        </div>
+    </div>
+ 
+</artical>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    $('code').each(function(i, block) {
+        var lines = $(this).text().split('\n').length - 1;
+        var $numbering = $('<ul/>').addClass('pre-numbering');
+        $(this).addClass('has-numbering').parent().append($numbering);
+        $(this).parent().css('height', lines*20+50);
+        for(i=1;i<=lines+1;i++){
+            $numbering.append($('<li/>').text(i));
+        }
+    });
+    $('br').remove();
+
+    var height = window.screen.availHeight ;
+    var postHeight = $('.postSwp').height();
+    var width = $('.postSwp').width();
+    if (height>postHeight) {
+        $('.postSwp').css('height',height); 
+        $('.particleground').css({'height': height, 'width': width});
+    } else {
+        $('.particleground').css({'height': postHeight, 'width': width});
+    }
+
+    $('.particleground').particleground({
+        dotColor: '#161823',
+        lineColor: '#161823',
+        density: 8000
+    });
+
+    $('.toc-link').click(function(){
+        $('.toc-link').css('color', '#161823');
+        $(this).css('color', 'green');
+    })
+    /*
+        调整nav样式
+    */
+    //菜单按钮
+    $('.menu-section').css('position', 'absolute');
+    $('.name').text('tangyuan').css('color', '#ffffff');
+    $('.navBtn').css('background-color', '#ffffff');
+
+    //search
+    $('.search').css({'background':'#161823', 'color': '#ffffff', 'border-color':'#ffffff'});
+    $('.searchBtn').css({'background':'#161823', 'color': '#ffffff'});
+</script>
 
         </main>
 
