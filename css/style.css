@@ -987,6 +987,9 @@ table {
     background-color: #e9f1f6;
   }
 }
+.main {
+  overflow: scroll;
+}
 .postSwp {
   display: block;
   width: 100%;
