@@ -495,6 +495,9 @@ table {
   width: 100%;
   height: 60px;
 }
+.page-nav a {
+  text-decoration: none;
+}
 .page-nav .page-number {
   display: inline-block;
   margin: 10px 0 10px 10px;
@@ -548,8 +551,8 @@ table {
 }
 @font-face {
   font-family: "iconfont";
-  src: url("iconfont.eot?t=1502937931567"); /* IE9*/
-  src: url("iconfont.eot?t=1502937931567#iefix") format('embedded-opentype'), url("iconfont.woff?t=1502937931567") format('woff'), url("iconfont.ttf?t=1502937931567") format('truetype'), url("iconfont.svg?t=1502937931567#iconfont") format('svg'); /* iOS 4.1- */
+  src: url("iconfont.eot?t=1503302983725"); /* IE9*/
+  src: url("iconfont.eot?t=1503302983725#iefix") format('embedded-opentype'), url("iconfont.woff?t=1503302983725") format('woff'), url("iconfont.ttf?t=1503302983725") format('truetype'), url("iconfont.svg?t=1503302983725#iconfont") format('svg'); /* iOS 4.1- */
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -557,6 +560,12 @@ table {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-tubiao02:before {
+  content: "\e60b";
+}
+.icon-tubiao03:before {
+  content: "\e60c";
 }
 .icon-sousuo:before {
   content: "\e732";
@@ -995,7 +1004,7 @@ table {
   display: block;
   width: 100%;
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 .contentBg {
   position: absolute;
@@ -1041,16 +1050,85 @@ table {
 .postContainer .postTime {
   color: #ccc;
 }
-.postContainer .contentRight {
+.postContainer .postContent {
+  padding-bottom: 10px;
+}
+.postContainer .postMessage {
+  position: relative;
+  height: 50px;
+  border-top: 1px solid #ccc;
+}
+.postContainer .postMessage a {
+  color: #000;
   position: absolute;
+  text-decoration: none;
+  display: block;
+  width: 300px;
+  height: 50px;
+}
+.postContainer .prevContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 50px;
+  margin-top: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.postContainer .nextContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 50px;
+  margin-top: 20px;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.postContainer .nextContainer a {
+  right: 0;
+}
+.postContainer .prev,
+.postContainer .next {
+  line-height: 50px;
+  font-size: 20px;
+  padding: 0;
+  font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+  transition: padding 0.5s ease-in;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.postContainer .prev:hover {
+  color: #008000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 0 0 20px;
+}
+.postContainer .next:hover {
+  color: #008000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 20px 0 0px;
+}
+.postContainer .contentRight {
+  position: fixed;
   top: 100px;
   right: 40px;
   display: inline-block;
   width: 250px;
+  -moz-transition: top 1s ease;
+  -webkit-transition: top 1s ease;
 }
 .postContainer .contentRight .tocContent {
   width: 200px;
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
   background: #e9f1f6;
   border-radius: 5px;
   box-shadow: 3px 3px 8px rgba(0,0,0,0.125);
@@ -1063,8 +1141,7 @@ table {
   color: #161823;
 }
 .postContainer .tocContent a:hover {
-  padding-left: 10px;
-  border-left: 3px solid #008000;
+  color: #008000;
 }
 .postContainer .tocContent ol {
   padding: 0;
@@ -1072,6 +1149,9 @@ table {
 }
 .postContainer .toc-child {
   margin-left: 20px;
+}
+.postContainer .toc .toc-item .toc-link-green {
+  color: #008000;
 }
 @-moz-keyframes leftAnim {
   0% {
@@ -1205,4 +1285,17 @@ table {
   padding: 0;
   line-height: 20px;
   list-style: none;
+}
+.footer {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: #ccc;
+  font-size: 14px;
+  background: #161823;
+}
+.footer a {
+  text-decoration: none;
+  cursor: pointer;
 }

@@ -4,7 +4,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>TangYuan</title>
-    <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
     <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -90,9 +89,30 @@
                 <span class="postTime">2017-08-21</span>
             </div>
             <div class="postContent">
-                
                 <p>这是正文<br><a id="more"></a><br>这也是正文</p>
 
+            </div>
+            <div class="postMessage">
+                
+                    <div class="prevContainer">
+                        <a href="/2017/08/21/my-first-blog的副本 19/">
+                            <div class="prev">
+                                <i class="iconfont icon-tubiao03"></i>
+                                my-first-blog
+                            </div>
+                        </a>
+                    </div>
+                
+                
+                    <div class="nextContainer">
+                        <a href="/2017/08/21/my-first-blog的副本 20/">
+                        <div class="next">
+                            my-first-blog
+                            <i class="iconfont icon-tubiao02"></i>
+                        </div>
+                        </a>
+                    </div>
+                
             </div>
         </div>
         <div class="contentRight rightAnim">
@@ -105,8 +125,29 @@
     </div>
  
 </artical>
+<script id="dsq-count-scr" src="//https-tangyuan4ou-github-io.disqus.com/count.js" async></script>
+<div id="disqus_thread"></div>
+<script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-tangyuan4ou-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<footer>
+    <div class="footer">
+        <span>©2017-未来&nbsp;♥&nbsp;tangyuan 
+            <a href="mailto:tangyuan_youyou@163.com" onfocus='this.blur();'>📪</a>
+        </span>
+    </div>
+</footer>
 
 <script>
+    /*
+        生成代码背景高亮
+    */
     hljs.initHighlightingOnLoad();
     $('code').each(function(i, block) {
         var lines = $(this).text().split('\n').length - 1;
@@ -119,10 +160,13 @@
     });
     $('br').remove();
 
-    var height = window.screen.availHeight ;
+    /*
+        背景canvas
+    */
+    var height = window.screen.availHeight;
     var postHeight = $('.postSwp').height();
     var width = $('.postSwp').width();
-    if (height>postHeight) {
+    if (height > postHeight) {
         $('.postSwp').css('height',height); 
         $('.particleground').css({'height': height, 'width': width});
     } else {
@@ -132,12 +176,43 @@
     $('.particleground').particleground({
         dotColor: '#161823',
         lineColor: '#161823',
-        density: 8000
+        density: 10000
     });
+    
 
-    $('.toc-link').click(function(){
-        $('.toc-link').css('color', '#161823');
-        $(this).css('color', 'green');
+    /*
+        目录
+    */
+    $(".toc-link").attr('onfocus','this.blur();');
+    $(".toc-link").click(function() {
+        $(".toc-link").removeClass('toc-link-green');
+        $(this).addClass('toc-link-green');
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 300,
+            easing: "swing"
+            });
+        return false;
+    });
+    $(window).scroll(function(){
+        var wst =  $(window).scrollTop();
+        if ( wst < 118 ) {
+            $('.contentRight').css({'position': 'fixed','top': 100});
+        } else if (wst > $('.contentleft').height() ) {
+            $('.contentRight').css({'position': 'absolute','top': 100});
+        } else if ( 118 < wst < $('.contentleft').height() ) {
+            $('.contentRight').css({'position': 'fixed','top': 30});
+        }
+        $(".toc-link").removeClass('toc-link-green');
+        var bitch = true;
+        $('.headerlink').each(function(){
+            if ( wst <= $(this).offset().top && bitch ) {
+                bitch = false;
+                var href = $(this).attr('href');
+                $("[href="+href+"]").addClass('toc-link-green')
+            }
+        })
     })
     /*
         调整nav样式
