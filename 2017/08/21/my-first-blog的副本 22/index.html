@@ -45,7 +45,7 @@
         <a href="/archives">archives</a>
       </li>
       <li class="list contact ">
-        <a href="/about">contact</a>
+        <a href="/contact">contact</a>
       </li>
       
     </ul>
@@ -73,10 +73,22 @@
 <!--
   菜单栏搜索下拉框
 -->
-<ul class="searchList">
-  
-</ul>
-
+<ul class="searchList"></ul>
+<script>
+var youyou = confirm("由于多说的死亡本网站使用了disqus评论系统，需要翻墙才可以显示，如果您可以翻墙那么请开启翻墙软件并单击确定可参与评论，如果没有翻墙软件请单击取消以保正网站的正常加载🌝");
+if (youyou) {
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-tangyuan4ou-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+}
+</script>
+<!--
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//https-tangyuan4ou-github-io.disqus.com/count.js" async></script>
+-->
 <artical class="postSwp">
   <div class="particleground"></div> 
     <div class="contentBg"></div>
@@ -95,7 +107,7 @@
             <div class="postMessage">
                 
                     <div class="prevContainer">
-                        <a href="/2017/08/21/my-first-blog的副本 5/">
+                        <a href="/2017/08/21/my-first-blog的副本 6/">
                             <div class="prev">
                                 <i class="iconfont icon-tubiao03"></i>
                                 my-first-blog
@@ -105,9 +117,9 @@
                 
                 
                     <div class="nextContainer">
-                        <a href="/2017/08/20/hello-world的副本 2/">
+                        <a href="/2017/08/21/my-first-blog的副本 3/">
                         <div class="next">
-                            Hello World
+                            my-first-blog
                             <i class="iconfont icon-tubiao02"></i>
                         </div>
                         </a>
@@ -118,34 +130,15 @@
         <div class="contentRight rightAnim">
             <div class="tocContent">
                 
-                    <div>这篇文章没有目录🙈</div>
+                    <div style="padding-bottom: 15px;">这篇文章没有目录🙈</div>
                 
             </div>
         </div>
     </div>
  
 </artical>
-<div id="disqus_thread"></div>
-<script>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://https-tangyuan4ou-github-io.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<script id="dsq-count-scr" src="//https-tangyuan4ou-github-io.disqus.com/count.js" async></script>
+<div id="disqus_thread"></div>
 
 <footer>
     <div class="footer">

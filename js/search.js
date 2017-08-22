@@ -20,13 +20,9 @@ $.ajax({
         }, this);
       }, this);
       function createList (data) {
-        $('.searchList').append('<li class="blogList"></li>')
-        $('.blogList').append('<a href="/'  +data.path + '"></a>');
-         $('.blogList').append('<h3>'+ data.title +'</h3>');
          data.tags.forEach(function(element) {
-           $('.blogList').append('<p>#'+ element.name +'</p>');
+           $('.searchList').append('<li class="blogList"><a href="/'  +data.path + '"></a><h3>'+ data.title +'</h3><p>#'+ element.name +'</p></li>');
          }, this);
-         
       }
     })
   }.bind(this),

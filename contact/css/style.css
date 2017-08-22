@@ -1,0 +1,61 @@
+body {
+  width: 100%;
+  position: relative;
+  position: relative;
+  background: #161823;
+}
+.menu-section {
+  position: fixed;
+  left: 50%;
+  width: 1200px;
+  background: #ffffff;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+.menu-section-animation {
+  width: 100%;
+  opacity: 0.5;
+  margin-top: 0;
+  animation: menuSectionAnimation 0.5s ease;
+}
+@keyframes menuSectionAnimation {
+  0%{
+    width: 1200px;
+    opacity: 1;
+  }
+  100%{
+    width: 100%;
+    opacity: 0.5;
+  }
+}
+.searchList {
+  position: fixed;
+  top: 45px;
+}
+
+.contact {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+.contact p {
+  margin: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: #cccccc;
+  font-size: 14px;
+  background: #161823;
+  
+}
+.footer a {
+    text-decoration: none;
+    cursor: pointer;
+  }

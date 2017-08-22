@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link href="http://localhost:4000/css/style.css" rel="stylesheet">-->
+    <link href="https://tangyuan4ou.github.io/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--
+    首页menu
+    -->
+    <div class="menuContainer ">
+      <div class="menuBg"></div>
+        <ul class="menu">
+          <li class="list about">
+            <a href="/">Home</a>
+          </li>
+          <li class="list img ">
+            <a href="/about">about</a>
+          </li>
+          <li class="list blog ">
+            <a href="/archives">archives</a>
+          </li>
+          <li class="list contact ">
+            <a href="/contact">contact</a>
+          </li>
+        </ul>
+      </div>
+    
+    <!--
+        菜单栏
+    -->
+    <nav class="menu-section">
+      <div class="nav">
+        <div class="menu-toggle">
+          <div class="navBtn one"></div>
+          <div class="navBtn two"></div>
+          <div class="navBtn three"></div>
+        </div>
+        <span class="name">Hi friend</span>
+        <div class="searchContainer">
+          <input id="search" class="search" type="text" placeholder="search...">
+          <button class="searchBtn"><i class="iconfont icon-sousuo"></i></button>
+        </div>
+      </div>
+    </nav>
+    <!--
+      菜单栏搜索下拉框
+    -->
+    <ul class="searchList"></ul>
+
+    <div class="contact">
+      <h3>本页依然是添加了disqus的评论，所以仍然需要翻墙</h3>
+      <p>这次没有设置弹窗，如果您不翻墙页面不会刷新出来的</p>
+      <p>文章数目过多我不一定会看全部评论，留言板的留言我会定期查看的</p>
+      <p>如果你对我编写的网站感兴趣，欢迎给我留言，大家一起学习成长✌</p>
+    </div>
+
+    <div id="disqus_thread"></div>
+    <script>
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-tangyuan4ou-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    </script>
+
+    <!--
+      footer
+    -->
+    <footer>
+      <div class="footer">
+        <span>©2017-未来&nbsp;♥&nbsp;tangyuan 
+            <a href="mailto:tangyuan_youyou@163.com" onfocus="this.blur();" target="_blank" rel="external">📪</a>
+        </span>
+      </div>
+    </footer>
+
+    <!--<script src="http://localhost:4000/js/jquery.js "></script>
+    <script src="http://localhost:4000/js/search.js "></script>
+    <script src="http://localhost:4000/js/index.js "></script>-->
+    <script src="https://tangyuan4ou.github.io/js/jquery.js "></script>
+    <script src="https://tangyuan4ou.github.io/js/search.js "></script>
+    <script src="https://tangyuan4ou.github.io/index.js "></script>
+
+    <script> 
+      var height = window.screen.availHeight; 
+      var left = ($('body').width()-1200)/2;
+      if( $('body').height() < height-130 ) {
+        $('body').css('height', height-130);
+      }
+      $('.contact').css('margin-left', left);
+      $('.searchList').css('right', 90+left);
+
+      $(window).scroll(function(){
+        var wst = $(window).scrollTop();
+        if ( wst == 0 ) {
+          $('.menu-section').removeClass('menu-section-animation');
+          $('.searchList').css('right', 90+left);
+        } else {
+          $('.menu-section').addClass('menu-section-animation');
+          $('.searchList').css('right', 90);
+        }
+      })
+    </script>
+    
+  </body>
+</html>
+
