@@ -33,7 +33,7 @@
     <!--
         菜单栏
     -->
-    <nav class="menu-section">
+    <nav class="menu-section menu-section-black">
       <div class="nav">
         <div class="menu-toggle">
           <div class="navBtn one"></div>
@@ -52,7 +52,7 @@
     -->
     <ul class="searchList"></ul>
 
-    <div class="contact">
+    <div class="contactContainer">
       <h3>本页依然是添加了disqus的评论，所以仍然需要翻墙</h3>
       <p>这次没有设置弹窗，如果您不翻墙页面不会刷新出来的</p>
       <p>文章数目过多我不一定会看全部评论，留言板的留言我会定期查看的</p>
@@ -90,10 +90,10 @@
     <script> 
       var height = window.screen.availHeight; 
       var left = ($('body').width()-1200)/2;
-      if( $('body').height() < height-130 ) {
-        $('body').css('height', height-130);
+      if( $('body').height() < height-30 ) {
+        $('body').css('height', height-30);
       }
-      $('.contact').css('margin-left', left);
+      $('.contactContainer').css('margin-left', left);
       $('.searchList').css('right', 90+left);
 
       $(window).scroll(function(){
@@ -105,6 +105,10 @@
           $('.menu-section').addClass('menu-section-animation');
           $('.searchList').css('right', 90);
         }
+      })
+
+      $('.menu-toggle').click(function(){
+        $('.menu-section').toggleClass('menu-section-black');
       })
     </script>
     
