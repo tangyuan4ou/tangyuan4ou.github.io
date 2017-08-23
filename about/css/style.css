@@ -1,3 +1,88 @@
-.div1 {
-  height: 10000px;
+body {
+  background: #161823;
+}
+.aboutContainer {
+  position: relative;
+  width: 995px;
+  margin: 60px auto 0;
+  background: #161823;
+  /*border: 1px solid rgb(233, 241, 246);*/
+}
+.aT,.aR,.aB,.aL {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.aT {
+  width: 0;
+  border-top: 1px solid rgb(233, 241, 246);
+  -webkit-animation: tA 1s ease 1s forwards;
+}
+.aR {
+  height: 0;
+  border-right: 1px solid rgb(233, 241, 246);
+  -webkit-animation: rA 1s ease 1s forwards;
+}
+.aB {
+  left: 993px;
+  width: 0;
+  border-bottom: 1px solid rgb(233, 241, 246);
+  -webkit-animation: bA 1s ease 1s forwards;
+}
+.aL {
+  height: 0;
+  top: 100%;
+  border-left: 1px solid rgb(233, 241, 246);
+  -webkit-animation: lA 1s ease 1s forwards;
+}
+@keyframes tA {
+  to {
+    width: 100%;
+  }
+}
+@keyframes rA {
+  to {
+    height: 100%;
+  }
+}
+@keyframes bA {
+  to {
+    left: 0;
+    width: 100%;
+  }
+}
+@keyframes lA {
+  to {
+    top: 0;
+    height: 100%
+  }
+}
+.aboutContainer .content{
+  width: 100%;
+  height: 300px; 
+  background: #161823;
+  -webkit-transition: background 2s ease 2s;
+}
+.draw {
+  stroke-dasharray: 1310;
+  stroke-dashoffset: 1310;
+  fill: #161823;
+  -webkit-transition: fill 2s ease;
+  -webkit-animation: draw 6s ease 2s forwards;
+}
+@keyframes draw {
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+.fill {
+  stroke-dasharray: 1310;
+  stroke-dashoffset: 1310;
+  -webkit-animation: fill 6s ease 2s forwards;
+}
+@keyframes fill {
+to {
+  stroke-dashoffset: 0;
+  fill: #161823;
+  }
 }
