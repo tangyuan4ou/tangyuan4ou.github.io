@@ -48,6 +48,41 @@
   $('.blog').css('left', newWidth-newWidth/4*2);
   $('.contact').css('left', newWidth-newWidth/4);
 
+  //单击a跳转前执行动画
+  $('.list > a').click(function(){
+    var this_ = $(this).parent();
+    this_.siblings().animate({
+      opacity: 0
+    }, 1000,function(){
+      this_.animate({
+        opacity: 0,
+        left: '-=20'
+      },1500,function(){
+        $('.menuBg').animate({
+          opacity: 0
+        },1000,function(){
+          window.location.href = this_.children().attr("href");
+        });
+      });
+    });
+    return false;
+  });
+  
+  $('.content a').click(function(){
+    var that = $(this).parent().parent();
+    that.siblings().animate({
+      opacity: 0
+    },1500,function(){
+      that.animate({
+        opacity: 0,
+        marginLeft: '200px'
+      },1500,function(){
+        window.location.href = that.children().children().attr("href");
+      });
+    });
+    return false;
+  });
+
   /*
     菜单呼入和呼出
   */

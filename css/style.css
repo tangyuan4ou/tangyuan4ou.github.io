@@ -1124,6 +1124,8 @@ table {
   right: 40px;
   display: inline-block;
   width: 250px;
+  right: -300px;
+  opacity: 0.2;
   -moz-transition: top 1s ease;
   -webkit-transition: top 1s ease;
 }
@@ -1135,7 +1137,7 @@ table {
   box-shadow: 3px 3px 8px rgba(0,0,0,0.125);
 }
 .postContainer .rightAnim {
-  animation: rightAnim 3s ease;
+  animation: rightAnim 2s ease 2s forwards;
 }
 .postContainer .tocContent a {
   text-decoration: none;
@@ -1195,57 +1197,25 @@ table {
   }
 }
 @-moz-keyframes rightAnim {
-  0% {
-    right: -300px;
-    opacity: 0.2;
-  }
-  50% {
-    right: -300px;
-    opacity: 0.2;
-  }
-  100% {
+  to {
     right: 40px;
     opacity: 1;
   }
 }
 @-webkit-keyframes rightAnim {
-  0% {
-    right: -300px;
-    opacity: 0.2;
-  }
-  50% {
-    right: -300px;
-    opacity: 0.2;
-  }
-  100% {
+  to {
     right: 40px;
     opacity: 1;
   }
 }
 @-o-keyframes rightAnim {
-  0% {
-    right: -300px;
-    opacity: 0.2;
-  }
-  50% {
-    right: -300px;
-    opacity: 0.2;
-  }
-  100% {
+  to {
     right: 40px;
     opacity: 1;
   }
 }
 @keyframes rightAnim {
-  0% {
-    right: -300px;
-    opacity: 0.2;
-  }
-  50% {
-    right: -300px;
-    opacity: 0.2;
-  }
-  100% {
+  to {
     right: 40px;
     opacity: 1;
   }
