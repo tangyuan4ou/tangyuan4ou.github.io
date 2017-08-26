@@ -7,25 +7,33 @@ $.ajax({
       var seach = document.getElementById("search")
       $('.blogList').remove();
       data.posts.forEach(function(element) {
-       var title_index = element.title.indexOf(seach.value);
-       if ( title_index > -1  && seach.value) {
-        createList(element);
-       }
+        var title_index = element.title.indexOf(seach.value);
+        if (title_index > -1 && seach.value) {
+          createList(element);
+          return;
+        }
         element.tags.forEach(function(tag) {
           var tag_index = tag.name.indexOf(seach.value);
-          if ( tag_index > -1 && seach.value) {
+          if (tag_index > -1 && seach.value) {
             createList(element);
           }
         }, this);
       }, this);
       function createList (data) {
         if ( data.tags.length != 0 ) {
-          var arr = [];
-          console.log(data.tags)
-          data.tags.forEach(function(element) {
-            console.log(element)
-            $('.searchList').append('<li class="blogList"><a href="/'  +data.path + '"></a><h3>'+ data.title +'</h3><span>'+ element.name + '</span></li>');
-          }, this);
+          var span = '';
+          if ( data.tags.length > 1 ) {
+            span = '';
+            for (var j=0; j<data.tags.length; j++) {
+              span = span + '<span class="span">#' + data.tags[j].name + '</span>';
+            }
+            $('.searchList').append('<li class="blogList"><a href="/'  +data.path + '"></a><h3>'+ data.title +'</h3>'+ span +'</li>')
+          } else {
+            for (var i in data.tags) {
+              span = '<span class="span">#'+ data.tags[i].name +'</span>';
+              $('.searchList').append('<li class="blogList"><a href="/'  +data.path + '"></a><h3>'+ data.title +'</h3>'+ span +'</li>')
+            }
+          }
         } else {
           $('.searchList').append('<li class="blogList"><a href="/'  +data.path + '"></a><h3>'+ data.title +'</h3><span>#无标签</span></li>');
         }
