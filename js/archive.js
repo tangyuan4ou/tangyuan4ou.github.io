@@ -50,7 +50,7 @@
         data.tags.forEach(function(tag){
           arr.push(tag.name);
           if (href.indexOf(tag.name) != -1) {
-            $('.name').text('tags:' + tag.name);
+            $('.name').text('tags: ' + tag.name);
             tagName = tag.name;
             $('.titleDate').css('fontSize','16px');
           }
