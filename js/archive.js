@@ -52,6 +52,7 @@
           if (href.indexOf(tag.name) != -1) {
             $('.name').text('tags:' + tag.name);
             tagName = tag.name;
+            $('.titleDate').css('fontSize','16px');
           }
         })
       })
@@ -68,7 +69,7 @@
         for (var i in tagArr) {
           a = a + '<li class="tags"><a class="tagHref">'+ tagArr[i] +'</a></li>';
         }
-        $('.tagContent').append(a);
+        $('.tagContent').append('<li class="tagM">menu:</li>').append(a);
         $('.tagHref').click(function(){
           var $this = $(this).text();
           location.href = href.slice(0,href.indexOf(tagName))+$this;
