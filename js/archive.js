@@ -45,11 +45,13 @@
     dataType: 'json',
     success: function(data) {
       var arr = [];
+      var tagName;
       data.posts.forEach(function(data){
         data.tags.forEach(function(tag){
           arr.push(tag.name);
           if (href.indexOf(tag.name) != -1) {
             $('.name').text('tags:' + tag.name);
+            tagName = tag.name;
           }
         })
       })
@@ -64,9 +66,14 @@
       if (href.indexOf('tag') != -1) {
         var a = '';
         for (var i in tagArr) {
-          a = a + '<li class="tags"><a href="／">'+ tagArr[i] +'</a></li>';
+          a = a + '<li class="tags"><a class="tagHref">'+ tagArr[i] +'</a></li>';
         }
         $('.tagContent').append(a);
+        $('.tagHref').click(function(){
+          var $this = $(this).text();
+          location.href = href.slice(0,href.indexOf(tagName))+$this;
+          console.log(location.href );
+        })
       }
     }.bind(this),
     error: function(xhr, status, err) {
