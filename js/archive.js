@@ -10,21 +10,9 @@
     $('.postBg').addClass('bg');
   },2000);
   setTimeout(function(){
-    $('.content').removeClass('contentAnimOn').addClass('contentAnimDown');
+    $('.content').addClass('contentAnimDown');
   },3000);
 
-  //鼠标指针划入目标项动画
-  $('.postBg').mouseenter(function() {
-    var that = $(this);
-    that.parent().children().eq(0).addClass('tAnim');
-    that.parent().children().eq(1).addClass('rAnim');
-    that.parent().children().eq(2).addClass('bAnim');
-    that.parent().children().eq(3).addClass('lAnim');
-    setTimeout(function() {
-      $('.swap').children().removeClass('tAnim').removeClass('rAnim').removeClass('bAnim').removeClass('lAnim');
-      that.parent().children().eq(4).removeClass('contentAnimDown').addClass('contentAnimOn');
-    },1000);
-  })
   //鼠标指针移除目标项动画
   $('.postBg').mouseleave(function() {
     var that = $(this);
@@ -34,7 +22,6 @@
       that.parent().children().eq(3).addClass('lAnim');
     setTimeout(function() {
       $('.swap').children().removeClass('tAnim').removeClass('rAnim').removeClass('bAnim').removeClass('lAnim');
-      that.parent().children().eq(4).removeClass('contentAnimOn').addClass('contentAnimDown');
     },1000);
   });
 

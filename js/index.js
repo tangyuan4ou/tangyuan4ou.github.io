@@ -68,20 +68,37 @@
     return false;
   });
   
-  $('.content a').click(function(){
-    var that = $(this).parent().parent();
-    that.siblings().animate({
-      opacity: 0
-    },1500,function(){
-      that.animate({
-        opacity: 0,
-        marginLeft: '200px'
-      },1500,function(){
-        window.location.href = that.children().children().attr("href");
-      });
-    });
-    return false;
-  });
+  // $('.postBg a').click(function(){
+  //   var that = $(this).parent().parent();
+  //   that.siblings().animate({
+  //     opacity: 0
+  //   },1500,function(){
+  //     that.children().eq(3).animate({
+  //       opacity: 0,
+  //       left: '-200px'
+  //     });
+  //     that.children().eq(2).animate({
+  //       opacity: 0,
+  //       bottom: '-200px'
+  //     });
+  //     that.children().eq(0).animate({
+  //       opacity: 0,
+  //       top: '-200px'
+  //     });
+  //     that.children().eq(1).animate({
+  //       opacity: 0,
+  //       right: '-200px'
+  //     });
+      
+  //     // that.children().eq(5).animate({
+  //     //   opacity: 0
+  //     // },function(){
+  //     //   // window.location.href = that.children().children().attr("href");
+  //     // });
+  //   });
+  //   return false;
+  // });
+  
 
   /*
     菜单呼入和呼出

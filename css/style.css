@@ -171,7 +171,7 @@ table {
   top: 0;
   width: 100%;
   height: 60px;
-  overflow: scroll;
+  overflow: hidden;
 }
 .nav {
   margin: 0 auto;
@@ -618,6 +618,8 @@ table {
   width: 1000px;
   margin: 0px auto;
   -webkit-animation: swpAnim 2s ease;
+  -moz-animation: swpAnim 2s ease;
+  animation: swpAnim 2s ease;
 }
 .archiveCntainer .titleDate {
   margin: 0px 10px 0;
@@ -632,6 +634,34 @@ table {
   height: 400px;
   margin: 10px 14.9px;
   padding: 0;
+  transform: translateY(0px);
+  -webkit-transition: all 1s ease;
+}
+.archiveCntainer .swap:hover .T {
+  -webkit-animation: tAnim 1s ease;
+  -moz-animation: tAnim 1s ease;
+  animation: tAnim 1s ease;
+}
+.archiveCntainer .swap:hover .R {
+  -webkit-animation: rAnim 1s ease;
+  -moz-animation: rAnim 1s ease;
+  animation: rAnim 1s ease;
+}
+.archiveCntainer .swap:hover .L {
+  -webkit-animation: lAnim 1s ease;
+  -moz-animation: lAnim 1s ease;
+  animation: lAnim 1s ease;
+}
+.archiveCntainer .swap:hover .B {
+  -webkit-animation: bAnim 1s ease;
+  -moz-animation: bAnim 1s ease;
+  animation: bAnim 1s ease;
+}
+.archiveCntainer .swap:hover .content {
+  background-color: #e9f1f6;
+  -webkit-animation: contentAnimOn 2s ease forwards;
+  -moz-animation: contentAnimOn 2s ease forwards;
+  animation: contentAnimOn 2s ease forwards;
 }
 .archiveCntainer .span {
   position: absolute;
@@ -642,24 +672,32 @@ table {
   height: 399px;
   border-top: 1px solid #fff;
   -webkit-transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  transition: width 1s ease;
 }
 .archiveCntainer .tt {
   width: 100%;
 }
 .archiveCntainer .tAnim {
   -webkit-animation: tAnim 1s ease;
+  -moz-animation: tAnim 1s ease;
+  animation: tAnim 1s ease;
 }
 .archiveCntainer .R {
   width: 299px;
   height: 0;
   border-right: 1px solid #fff;
   -webkit-transition: height 1s ease;
+  -moz-animation: height 1s ease;
+  animation: height 1s ease;
 }
 .archiveCntainer .rr {
   height: 100%;
 }
 .archiveCntainer .rAnim {
   -webkit-animation: rAnim 1s ease;
+  -moz-animation: rAnim 1s ease;
+  animation: rAnim 1s ease;
 }
 .archiveCntainer .L {
   top: 400px;
@@ -667,6 +705,8 @@ table {
   width: 299px;
   border-left: 1px solid #fff;
   -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .archiveCntainer .ll {
   top: 0;
@@ -674,6 +714,8 @@ table {
 }
 .archiveCntainer .lAnim {
   -webkit-animation: lAnim 1s ease;
+  -moz-animation: lAnim 1s ease;
+  animation: lAnim 1s ease;
 }
 .archiveCntainer .B {
   left: 300px;
@@ -681,6 +723,8 @@ table {
   height: 399px;
   border-bottom: 1px solid #fff;
   -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .archiveCntainer .bb {
   left: 0;
@@ -688,6 +732,8 @@ table {
 }
 .archiveCntainer .bAnim {
   -webkit-animation: bAnim 1s ease;
+  -moz-animation: bAnim 1s ease;
+  animation: bAnim 1s ease;
 }
 .archiveCntainer .content {
   position: absolute;
@@ -696,6 +742,8 @@ table {
   top: 2px;
   left: 2px;
   transition: opacity 2s ease;
+  -moz-transition: opacity 2s ease;
+  -webkit-transition: opacity 2s ease;
 }
 .archiveCntainer .postBg {
   position: absolute;
@@ -715,12 +763,6 @@ table {
 }
 .archiveCntainer .bg {
   opacity: 1;
-}
-.archiveCntainer .contentAnimOn {
-  background-color: #e9f1f6;
-  -webkit-animation: contentAnimOn 2s ease forwards;
-  -moz-animation: contentAnimOn 2s ease forwards;
-  animation: contentAnimOn 2s ease forwards;
 }
 .archiveCntainer .contentAnimDown {
   background-color: #e9f1f6;
@@ -1145,6 +1187,11 @@ table {
 }
 .postContainer .postContent {
   padding-bottom: 10px;
+}
+.postContainer .postContent a {
+  text-decoration: none;
+  color: #008000;
+  cursor: pointer;
 }
 .postContainer .tagContainer {
   padding-bottom: 10px;
