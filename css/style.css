@@ -251,7 +251,7 @@ table {
   height: 28px;
   border: 0;
   outline: none;
-  background: #fff;
+  background: none;
 }
 .nav .icon-sousuo {
   font-size: 25px;
@@ -448,7 +448,7 @@ table {
   padding: 0;
   z-index: 20;
   opacity: 0.8;
-  overflow: scroll;
+  overflow: auto;
 }
 .searchList .blogList {
   position: relative;
@@ -1409,7 +1409,7 @@ table {
   border-radius: 5px;
   box-shadow: 3px 3px 8px rgba(0,0,0,0.125);
   font-size: 12px;
-  overflow: scroll;
+  overflow: hidden;
 }
 .code .codeHeight {
   width: 750px;

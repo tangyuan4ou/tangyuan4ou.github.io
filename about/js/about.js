@@ -9,7 +9,7 @@
 
   //search
   $('.search').css({'background':'#161823', 'color': '#ffffff', 'border-color':'#ffffff'});
-  $('.searchBtn').css({'background':'#161823', 'color': '#ffffff'});
+  $('.searchBtn').css({'background':'none', 'color': '#ffffff'});
 
   //svg动画，文章背景填充颜色
   setTimeout(function(){

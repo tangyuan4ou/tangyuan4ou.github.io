@@ -78,8 +78,8 @@ body {
   }
 }
 .fill {
-  stroke-dasharray: 1310;
-  stroke-dashoffset: 1310;
+  stroke-dasharray: 1310; /*定义描边的虚线长度，如果提供奇数个，则会自动复制该值成偶数*/
+  stroke-dashoffset: 1310; /*定义虚线描边的偏移量（在路径开始的前面，看不到）*/
   -moz-animation: fill 5s ease 2s forwards;
   -webkit-animation: fill 5s ease 2s forwards;
 }

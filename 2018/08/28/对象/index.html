@@ -103,7 +103,7 @@ if (youyou) {
             <div class="postContent">
                 <h1 id="关于Hexo和Hexo的安装"><a href="#关于Hexo和Hexo的安装" class="headerlink" title="关于Hexo和Hexo的安装"></a>关于Hexo和Hexo的安装</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;关于Hexo我就不做详细的介绍了。现在，简单说一下安装。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;hexo官网上讲mac和w的安装不同，并且max要基于xCode，但是本人换mac电脑后在搭环境的时候并没有使用xCode，目前没有发现问题。（因为我本人觉得xCode难用😂，可能我段位不行吧）</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;安装很简单，按照<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>文档一步步来就可以了，有一个问题是在挂载到gitHub上的时候.yml配置文件要加空格。（可能都知道了吧😅）</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;安装很简单，按照<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>文档一步步来就可以了，有一个问题是在挂载到gitHub上的时候.yml配置文件要加空格。</p>
 <h1 id="从零开始编写Hexo主题"><a href="#从零开始编写Hexo主题" class="headerlink" title="从零开始编写Hexo主题"></a>从零开始编写Hexo主题</h1><h2 id="新建主题"><a href="#新建主题" class="headerlink" title="新建主题"></a>新建主题</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;关于编写主题呢，我是在Hexo的默认主题里编写的，在themes新建文件夹，修改配置文件，改为你新建文件夹的名字。</p>
 <div class="code"><br><div class="codeHeight"><br>  ./_config.yml<br></div><br><code>theme: 名字随意，但是和themes下新建文件夹名字相同</code><br></div>
 
@@ -126,7 +126,7 @@ if (youyou) {
 <p>&nbsp;&nbsp;&nbsp;&nbsp;在css文件夹中创建style.styl，编写一些基础样式，并把所有样式import到这个文件夹。所以最终编译之后只会有style.css一个文件夹。创建——partial/header.styl与_partial/post.styl存放页面导航以及文章的样式，并且在style.styl中import这两个文件夹。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;我在网页中引用阿里icon了，所以我把字体文件也放到这个文件夹了。</p>
 <h2 id="添加留言板"><a href="#添加留言板" class="headerlink" title="添加留言板"></a>添加留言板</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;这部分我使用的是<a href="https://blog.disqus.com/" target="_blank" rel="external">disqus</a><br>插件，可以去它的官网注册一个账号。把它的js代码放到自己的代码中就可以了。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;但是有一个文问题它被墙了，得翻墙才能使用，谁让它不用输入备案号呢，多说也死了，如果你的网站有备案号并且不想跨域的话也可以使用畅言。据说可以随便输个备案号就能用，我没试过不好使可别过来评论骂我啊。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;但是有一个问题是它被墙了，得翻墙才能使用，谁让它不用输入备案号呢，多说也死了，如果你的网站有备案号并且不想跨域的话也可以使用畅言。据说可以随便输个备案号就能用，我没试过不好使可别过来评论骂我啊。</p>
 <h2 id="添加站内搜索"><a href="#添加站内搜索" class="headerlink" title="添加站内搜索"></a>添加站内搜索</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;我下载的hexo-generator-json-content插件会生成content.json文件，直接发ajax就好了。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;还有一个插件hexo-generator-search会生成search.xml文件。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;也可以使用Swiftype、 微搜索、Local Search 和 Algolia,Swiftype和Algolia等插件，据说有的有试用期，我觉得工程量不大，所以我没调用，所以好不好用我也不知道。大家自行感悟吧。</p>
@@ -258,7 +258,7 @@ if (youyou) {
 
     //search
     $('.search').css({'background':'#161823', 'color': '#ffffff', 'border-color':'#ffffff'});
-    $('.searchBtn').css({'background':'#161823', 'color': '#ffffff'});
+    $('.searchBtn').css({'color': '#ffffff'});
 </script>
 
         </main>
