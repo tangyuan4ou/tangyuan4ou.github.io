@@ -123,13 +123,53 @@ if (youyou) {
 <p>3.source:</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;主要存放css/js/img等资源文件.</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;在Hexo新建项目时会安装hexo-render-stylus这个插件，所以无需其他步骤，只需要将样式文件放到css文件夹中css文件夹中。Hexo在生成页面的时候会将source中的所有文件复制到生成的public文件夹中，并且在此之前会编译styl为css文件。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;在css文件夹中创建style.styl，编写一些基础样式，并把所有样式import到这个文件夹。所以最终编译之后只会有style.css一个文件夹。创建——partial/header.styl与_partial/post.styl存放页面导航以及文章的样式，并且在style.styl中import这两个文件夹。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在css文件夹中创建style.styl，编写一些基础样式，并把所有样式import到这个文件夹。所以最终编译之后只会有style.css一个文件夹。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;我在网页中引用阿里icon了，所以我把字体文件也放到这个文件夹了。</p>
+<h2 id="添加页面"><a href="#添加页面" class="headerlink" title="添加页面"></a>添加页面</h2><p>新建页面的命令是hexo n page ‘页面名称’</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;创建页面后页面会在source目录下新建文件夹，有一个.md的入口文件，可以在文件夹下加入css／js等文件夹，但是有一个问题是当前目录下的页面想要访问public下资源文件时不能使用本地路径，使用: </p>
+<div class="code"><br><div class="codeHeight"><br>  css<br></div><br><code>线上使用：
+  &lt;link href=&quot;https://yourName.github.io/css/style.css&quot; rel=&quot;stylesheet&quot;&gt;
+调试可以使用：
+  &lt;link href=&quot;http//localhost:4000/css/style.css&quot; rel=&quot;stylesheet&quot;&gt;</code><br></div>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;js和img同理</p>
+<h2 id="添加目录"><a href="#添加目录" class="headerlink" title="添加目录"></a>添加目录</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;在要添加目录的页面中加入下面的代码，我是在post页添加的</p>
+<div class="code"><br><div class="codeHeight"><br>  post.ejs<br></div><br><code>toc(post.content)
+或
+toc(page.content, {list_number: true}) //是否显示列表数字</code><br></div>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;最后在编写文章的时候添加 toc: true字段就可以了。</p>
 <h2 id="添加留言板"><a href="#添加留言板" class="headerlink" title="添加留言板"></a>添加留言板</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;这部分我使用的是<a href="https://blog.disqus.com/" target="_blank" rel="external">disqus</a><br>插件，可以去它的官网注册一个账号。把它的js代码放到自己的代码中就可以了。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;但是有一个问题是它被墙了，得翻墙才能使用，谁让它不用输入备案号呢，多说也死了，如果你的网站有备案号并且不想跨域的话也可以使用畅言。据说可以随便输个备案号就能用，我没试过不好使可别过来评论骂我啊。</p>
 <h2 id="添加站内搜索"><a href="#添加站内搜索" class="headerlink" title="添加站内搜索"></a>添加站内搜索</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;我下载的hexo-generator-json-content插件会生成content.json文件，直接发ajax就好了。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;还有一个插件hexo-generator-search会生成search.xml文件。</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;也可以使用Swiftype、 微搜索、Local Search 和 Algolia,Swiftype和Algolia等插件，据说有的有试用期，我觉得工程量不大，所以我没调用，所以好不好用我也不知道。大家自行感悟吧。</p>
+<h1 id="Hexo的命令"><a href="#Hexo的命令" class="headerlink" title="Hexo的命令"></a>Hexo的命令</h1><p>Hexo的常见命令有：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;hexo n == hexo new ‘’&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新建博客或者页面  新建页面是hexo n page ‘’</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;hexo g == hexo generate&nbsp;&nbsp;&nbsp;&nbsp;将文件打包到静态文件public下</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;hexo c == hexo  clean&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清空public文件夹下的内容</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;hexo s == hexo server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本地运行代码，默认端口4000</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;hexo d == hexo deploy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将public的内容提交到远端</p>
+<p>还有一些命令帮助：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1、help：查看帮助信息</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;2、init[文件夹名]：创建一个hexo项目，不指定文件夹名则在当前目录创建</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;3、version：查看hexo的版本</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;4、–config config-path：指定配置文件，代替默认的_config.yml</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;5、–cwd cwd-path：指定当前工作目录</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;6、–debug：调试模式，输出所有日志信息</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;7、–safe：安全模式，禁用所有插件和脚本</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;8、–silent：无日志输出模式</p>
+<p>我一般的命令习惯是：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;hexo s –debug</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;hexo c</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;hexo g</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;hexo d</p>
+<h1 id="编写文章"><a href="#编写文章" class="headerlink" title="编写文章"></a>编写文章</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;可以翻阅一下<a href="http://www.appinn.com/markdown/basic.html" target="_blank" rel="external">Markdown</a>的文档。基于它的规范编写就可以了</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;以上就是我编写hexo的全部心得了，虽然写的不是特别详细但是我觉得也足够用了。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;从开始决定写博客到实现用了半年的时间，之前很懒，直接用react+webpack写了一版打包直接就扔到public文件夹下了，连ejs都没有用，所以问题很多也并没有实现，后来开始毕设就无限搁置了，直到7月31日我正式入职新东方，电脑也换新的，我收起躁动的心，重新搭环境，按照hexo的规范编写了这个主题，从搭环境到编写主题，中间还有对网站的设计一共用了3周，因为是边学边写，可能很多地方都不是很完美，在未来我会一步步完善的。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;欢迎大家提意见。你们的意见是我学习的动力😄。</p>
+<p>以上</p>
+<p>祝好</p>
 
             </div>
             <div class="tagContainer">
@@ -160,7 +200,7 @@ if (youyou) {
             <div class="tocContent">
                 
                 <strong class="tocTitle">🙊文章目录</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Hexo和Hexo的安装"><span class="toc-number">1.</span> <span class="toc-text">关于Hexo和Hexo的安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#从零开始编写Hexo主题"><span class="toc-number">2.</span> <span class="toc-text">从零开始编写Hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#新建主题"><span class="toc-number">2.1.</span> <span class="toc-text">新建主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写主题"><span class="toc-number">2.2.</span> <span class="toc-text">编写主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加留言板"><span class="toc-number">2.3.</span> <span class="toc-text">添加留言板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加站内搜索"><span class="toc-number">2.4.</span> <span class="toc-text">添加站内搜索</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Hexo和Hexo的安装"><span class="toc-number">1.</span> <span class="toc-text">关于Hexo和Hexo的安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#从零开始编写Hexo主题"><span class="toc-number">2.</span> <span class="toc-text">从零开始编写Hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#新建主题"><span class="toc-number">2.1.</span> <span class="toc-text">新建主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写主题"><span class="toc-number">2.2.</span> <span class="toc-text">编写主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加页面"><span class="toc-number">2.3.</span> <span class="toc-text">添加页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加目录"><span class="toc-number">2.4.</span> <span class="toc-text">添加目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加留言板"><span class="toc-number">2.5.</span> <span class="toc-text">添加留言板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加站内搜索"><span class="toc-number">2.6.</span> <span class="toc-text">添加站内搜索</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo的命令"><span class="toc-number">3.</span> <span class="toc-text">Hexo的命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编写文章"><span class="toc-number">4.</span> <span class="toc-text">编写文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
                 
             </div>
         </div>
