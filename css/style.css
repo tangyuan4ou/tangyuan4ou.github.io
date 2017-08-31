@@ -170,10 +170,12 @@ table {
   left: 0;
   top: 0;
   width: 100%;
+  min-width: 1200px;
   height: 60px;
   overflow: hidden;
 }
 .nav {
+  position: relative;
   margin: 0 auto;
   width: 1200px;
 }
@@ -443,7 +445,7 @@ table {
 .searchList {
   position: absolute;
   top: 30px;
-  right: 90px;
+  right: 130px;
   height: 145px;
   padding: 0;
   z-index: 20;
