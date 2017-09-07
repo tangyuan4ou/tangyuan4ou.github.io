@@ -36,7 +36,7 @@
       data.posts.forEach(function(data){
         data.tags.forEach(function(tag){
           arr.push(tag.name);
-          if (href.indexOf(tag.name) != -1) {
+          if (href.indexOf(tag.name) != -1 && href.indexOf("tags") != -1) {
             $('.name').text('tags: ' + tag.name);
             tagName = tag.name;
             $('.titleDate').css('fontSize','16px');
