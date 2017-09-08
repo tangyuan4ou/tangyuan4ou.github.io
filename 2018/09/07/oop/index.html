@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>TangYuan</title>
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+    <body>
+        <script src="/js/jquery.js"></script> 
+        <script src="/js/jquery.particleground.min.js"></script>        
+        <div class="error">
+            <h1>警告！！</h1>
+            <h1>这是警告！！!</h1>
+            <h3>因为您的浏览器屏幕太小，页面展示不下，所以原有DOM元素生气带着它的伙伴离家出走了，如果换成pc端并且单击全屏后再刷新说不定它就回来了</h3>
+            <h3>最后，敬在茫茫网站中能发现我网站的你，祝好，以上。。。</h3>
+            <h6>我的网站我作主，看不懂中文的你们自己翻译吧☠ &nbsp;&nbsp;&nbsp;&nbsp; ---来自一个任性的博主</h6>
+        </div>
+
+        <div class="error2">
+            <h1>警告！！</h1>
+            <h1>这ye是警告！！!</h1>
+            <h3>本人真的不是懒，，，，，（省略一万字）</h3>
+            <h3>好吧编不出理由了，我就是懒，本网站只做了谷歌、火狐、Safari的兼容，谁让这是我私有的呢，任性，哈哈，如果打不开请换一个浏览器，说不定你会喜欢我的创意，没毛病，，，</h3>
+            <h3>浏览器请用最新的版本，否则我也不知道它会不会癫狂，可别尝试用非以上三种浏览器打开网页，就算您能打开，里面的元素不一定表现出什么癫狂的混乱，反正用qq浏览器打开我癫狂了，不说了，去吃药了。</h3>
+            <h3>最后，敬在茫茫网站中能发现我网站的你，祝好，以上。。。</h3>
+            <h6>我的网站我作主，看不懂中文的你们自己翻译吧☠ &nbsp;&nbsp;&nbsp;&nbsp; ---来自一个任性的博主</h6>
+        </div>
+
+        <main class="main">
+            <!--
+    首页menu
+-->
+<div class="menuContainer ">
+  <div class="menuBg"></div>
+    <ul class="menu">
+      <li class="list about">
+        <a href="/">Home</a>
+      </li>
+      <li class="list img ">
+        <a href="/about">about</a>
+      </li>
+      <li class="list blog ">
+        <a href="/archives">archives</a>
+      </li>
+      <li class="list contact ">
+        <a href="/contact">contact</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<!--
+    菜单栏
+-->
+<nav class="menu-section">
+  <div class="nav">
+    <div class="menu-toggle">
+      <div class="navBtn one"></div>
+      <div class="navBtn two"></div>
+      <div class="navBtn three"></div>
+    </div>
+    <span class="name">Hi friend</span>
+    <div class="searchContainer">
+      <input id="search" class="search" type="text" placeholder="search..." />
+      <button class="searchBtn"><i class="iconfont icon-sousuo"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!--
+  菜单栏搜索下拉框
+-->
+<ul class="searchList"></ul>
+<script>
+var youyou = confirm("由于多说的死亡本网站使用了disqus评论系统，需要翻墙才可以显示，如果您可以翻墙那么请开启翻墙软件并单击确定可参与评论，如果没有翻墙软件请单击取消以保正网站的正常加载🌝");
+if (youyou) {
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-tangyuan4ou-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+}
+</script>
+<!--
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//https-tangyuan4ou-github-io.disqus.com/count.js" async></script>
+-->
+<artical class="postSwp">
+  <div class="particleground"></div> 
+    <div class="contentBg"></div>
+    <div class="postContainer">
+        <div class="contentleft leftAnim">
+            <div>
+                <p class="postTitle">关于面向对象编程思想的理解</p>
+            </div>
+            <div class="postMeta">
+                <span class="postTime">2018-09-07</span>
+            </div>
+            <div class="postContent">
+                <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;面向对象的思想主要以对象为主，将一个问题抽象成一个具体的对象，并将抽象出来的对象和对象的属性和方法封装成一个类。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;面向对象是把构成问题的事物分解成对象，建立对象的目的不是为了要完成一个步骤，而是为了描述某个事物在整个解决问题的步骤中的行为。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;实例化：在面向对象的编程中，通常把用类创建对象的过程叫做实例化</p>
+<h2 id="面向对象与面向过程的区别"><a href="#面向对象与面向过程的区别" class="headerlink" title="面向对象与面向过程的区别"></a>面向对象与面向过程的区别</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;面向对象以名词为主，将问题抽象成具体的对象，在解决问题的时候将不同对象组合在一起。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;面向过程以动词为主，主要是分析问题的解决步骤，将问题一步步实现后拼接在一起。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;有一个比喻很出名也很有意思：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面向对象：狗.吃(屎)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面向过程：吃.(狗， 屎)</p>
+<p>没写完还在写</p>
+
+            </div>
+            <div class="tagContainer">
+                
+                    <div class="tagCon">
+                        <p class="tagArrow"></p>
+                        <p class="tag">#OOP
+                            <a href="/tags/OOP"></a>
+                        </p>
+                    </div>
+                
+                    <div class="tagCon">
+                        <p class="tagArrow"></p>
+                        <p class="tag">#js
+                            <a href="/tags/js"></a>
+                        </p>
+                    </div>
+                
+            </div>
+            <div class="postMessage">
+                
+                
+                    <div class="nextContainer">
+                        <a href="/2018/08/28/hexo/">
+                        <div class="next">
+                            关于Hexo主题的制作
+                            <i class="iconfont icon-tubiao02"></i>
+                        </div>
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="contentRight rightAnim">
+            <div class="tocContent">
+                
+                <strong class="tocTitle">🙊文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#面向对象"><span class="toc-number">1.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象与面向过程的区别"><span class="toc-number">1.1.</span> <span class="toc-text">面向对象与面向过程的区别</span></a></li></ol></li></ol>
+                
+            </div>
+        </div>
+    </div>
+ 
+</artical>
+
+<div id="disqus_thread"></div>
+
+<footer>
+    <div class="footer">
+        <span>©2017-未来&nbsp;♥&nbsp;tangyuan 
+            <a href="mailto:tangyuan_youyou@163.com" onfocus='this.blur();'>📪</a>
+        </span>
+    </div>
+</footer>
+
+<script>
+    /*
+        生成代码背景高亮
+    */
+    hljs.initHighlightingOnLoad();
+    $('code').each(function(i, block) {
+        var lines = $(this).text().split('\n').length - 1;
+        var $numbering = $('<ul/>').addClass('pre-numbering');
+        $(this).addClass('has-numbering').parent().append($numbering);
+        $(this).parent().css('height', lines*20+50);
+        for(i=1;i<=lines+1;i++){
+            $numbering.append($('<li/>').text(i));
+        }
+    });
+    $('br').remove();
+
+    /*
+        背景canvas
+    */
+    var height = window.screen.availHeight;
+    var postHeight = $('.postSwp').height();
+    var width = $('.postSwp').width();
+    if (height > postHeight) {
+        $('.postSwp').css('height',height); 
+        $('.particleground').css({'height': height, 'width': width});
+    } else {
+        $('.particleground').css({'height': postHeight, 'width': width});
+    }
+
+    $('.particleground').particleground({
+        dotColor: '#161823',
+        lineColor: '#161823',
+        density: 10000
+    });
+    
+
+    /*
+        目录
+    */
+    $(".toc-link").attr('onfocus','this.blur();');
+    $(".toc-link").click(function() {
+        $(".toc-link").removeClass('toc-link-green');
+        $(this).addClass('toc-link-green');
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 300,
+            easing: "swing"
+            });
+        return false;
+    });
+    $(window).scroll(function(){
+        var wst =  $(window).scrollTop();
+        if ( wst < 118 ) {
+            $('.contentRight').css({'position': 'fixed','top': 100});
+        } else if (wst > $('.contentleft').height() ) {
+            $('.contentRight').css({'position': 'absolute','top': 100});
+        } else if ( 118 < wst < $('.contentleft').height() ) {
+            $('.contentRight').css({'position': 'fixed','top': 30});
+        }
+        $(".toc-link").removeClass('toc-link-green');
+        var bitch = true;
+        $('.headerlink').each(function(){
+            if ( wst <= $(this).offset().top && bitch ) {
+                bitch = false;
+                var href = $(this).attr('href');
+                $("[href="+href+"]").addClass('toc-link-green')
+            }
+        })
+    })
+    /*
+        调整nav样式
+    */
+    //菜单按钮
+    $('.menu-section').css('position', 'absolute');
+    $('.name').text('tangyuan').css('color', '#ffffff');
+    $('.navBtn').css('background-color', '#ffffff');
+
+    //search
+    $('.search').css({'background':'#161823', 'color': '#ffffff', 'border-color':'#ffffff'});
+    $('.searchBtn').css({'color': '#ffffff'});
+
+</script>
+
+        </main>
+
+        <script src="/js/index.js"></script>
+        <script src="/js/canvas.js"></script>
+        <script src="/js/archive.js"></script>
+        <script src="/js/search.js"></script>
+    </body>
+</html>

@@ -63,6 +63,7 @@
           console.log(location.href );
         })
       }
+      
     }.bind(this),
     error: function(xhr, status, err) {
       console.log('/content.json', status, err.toString());

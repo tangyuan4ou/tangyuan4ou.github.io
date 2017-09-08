@@ -482,7 +482,7 @@ table {
 }
 .searchList .blogList .span {
   display: inline-block;
-  width: 30px;
+  width: 50px;
   height: 25px;
   font-size: 14px;
 }
@@ -1319,6 +1319,12 @@ table {
   background: #e9f1f6;
   border-radius: 5px;
   box-shadow: 3px 3px 8px rgba(0,0,0,0.125);
+}
+.postContainer .contentRight .toc {
+  font-size: 14px;
+}
+.postContainer .contentRight .toc .toc-child {
+  font-size: 12px;
 }
 .postContainer .rightAnim {
   animation: rightAnim 2s ease 2s forwards;
