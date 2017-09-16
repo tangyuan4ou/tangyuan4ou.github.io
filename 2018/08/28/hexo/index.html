@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>TangYuan</title>
-    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <!--<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>-->
     <link rel="stylesheet" href="/css/style.css">
 </head>
     <body>
@@ -222,7 +222,7 @@ toc(page.content, {list_number: true}) //是否显示列表数字</code><br></di
     /*
         生成代码背景高亮
     */
-    hljs.initHighlightingOnLoad();
+    //hljs.initHighlightingOnLoad();
     $('code').each(function(i, block) {
         var lines = $(this).text().split('\n').length - 1;
         var $numbering = $('<ul/>').addClass('pre-numbering');

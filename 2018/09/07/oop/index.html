@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>TangYuan</title>
-    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <!--<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>-->
     <link rel="stylesheet" href="/css/style.css">
 </head>
     <body>
@@ -109,7 +109,22 @@ if (youyou) {
 <p>&nbsp;&nbsp;&nbsp;&nbsp;有一个比喻很出名也很有意思：</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面向对象：狗.吃(屎)</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面向过程：吃.(狗， 屎)</p>
-<p>没写完还在写</p>
+<h1 id="面向对象两种表达方式"><a href="#面向对象两种表达方式" class="headerlink" title="面向对象两种表达方式"></a>面向对象两种表达方式</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;面向对象有两种表达方式，基于类的面向对象和基于原型的面向对象。在基于类的面向对象方式中，对象依靠类来产生。而在基于原型的面向对象方式中，对象则是依靠构造器利用原型构造出来的。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;关于这两种哪个更彻底的表达了面向对象的思想目前尚有争论。我也就不发表意见了。</p>
+<div class="code"><br><div class="codeHeight"><br>关于对象的上下文依赖（我在别的文章看到的，忘了出处了）<br></div><br><code>var str = &quot;我是String对象的声明&quot;
+var obj = { des: &quot;我是obj对象的声明&quot; }
+var fun = function () {
+  console.log(&quot;我是函数对象，目前属于：&quot;， this)
+};
+obj.fun = fun;
+console.log( this === window );  //true
+console.log( window.str === str );  //true
+console.log( window.obj === obj );  //true
+console.log( window.fun === fun );  //true
+fun();  //我是函数对象，目前属于：wimdow
+obj.fun();  //我是一个函数对象，目前属于：obj
+fun.apply(str);  //我是一个函数对象，目前属于：str</code><br></div>
+
 
             </div>
             <div class="tagContainer">
@@ -147,7 +162,7 @@ if (youyou) {
             <div class="tocContent">
                 
                 <strong class="tocTitle">🙊文章目录</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#面向对象"><span class="toc-number">1.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象与面向过程的区别"><span class="toc-number">1.1.</span> <span class="toc-text">面向对象与面向过程的区别</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#面向对象"><span class="toc-number">1.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象与面向过程的区别"><span class="toc-number">1.1.</span> <span class="toc-text">面向对象与面向过程的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#面向对象两种表达方式"><span class="toc-number">2.</span> <span class="toc-text">面向对象两种表达方式</span></a></li></ol>
                 
             </div>
         </div>
@@ -169,7 +184,7 @@ if (youyou) {
     /*
         生成代码背景高亮
     */
-    hljs.initHighlightingOnLoad();
+    //hljs.initHighlightingOnLoad();
     $('code').each(function(i, block) {
         var lines = $(this).text().split('\n').length - 1;
         var $numbering = $('<ul/>').addClass('pre-numbering');
