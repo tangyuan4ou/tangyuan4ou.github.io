@@ -21,7 +21,8 @@
   */
   var userAgent = navigator.userAgent; //获取浏览器userAgent字符串
   console.log(userAgent)
-  if (userAgent.indexOf('Firefox') < -1 && userAgent.indexOf('Chrome') < -1 && userAgent.indexOf('Safari') < -1) {
+  if (userAgent.indexOf('Windows') > -1) {
+    // console.log(111111);
     $('.main').remove();
     $('.error').remove();
     $('.error2').addClass('errorOn');
