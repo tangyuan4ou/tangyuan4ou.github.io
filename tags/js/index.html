@@ -117,6 +117,13 @@
 </section>
 
 <script>
+    var height = window.innerHeight - 10;
+    var conHeight = $('.archiveCntainer').height();
+    if ( height > conHeight ) {
+        $('.archiveCntainer').css('height', height)
+    } else {
+        $('.archiveCntainer').css('height', conHeight)
+    }
     /*
         调整archive页nav样式
     */
