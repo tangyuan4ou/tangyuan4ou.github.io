@@ -199,7 +199,7 @@ toc(page.content, {list_number: true}) //是否显示列表数字</code><br></di
         <div class="contentRight rightAnim">
             <div class="tocContent">
                 
-                <strong class="tocTitle">🙊文章目录</strong>
+                <strong class="tocTitle">🙊&nbsp;文章目录</strong>
                     <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于Hexo和Hexo的安装"><span class="toc-number">1.</span> <span class="toc-text">关于Hexo和Hexo的安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#从零开始编写Hexo主题"><span class="toc-number">2.</span> <span class="toc-text">从零开始编写Hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#新建主题"><span class="toc-number">2.1.</span> <span class="toc-text">新建主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写主题"><span class="toc-number">2.2.</span> <span class="toc-text">编写主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加页面"><span class="toc-number">2.3.</span> <span class="toc-text">添加页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加目录"><span class="toc-number">2.4.</span> <span class="toc-text">添加目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加留言板"><span class="toc-number">2.5.</span> <span class="toc-text">添加留言板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加站内搜索"><span class="toc-number">2.6.</span> <span class="toc-text">添加站内搜索</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo的命令"><span class="toc-number">3.</span> <span class="toc-text">Hexo的命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编写文章"><span class="toc-number">4.</span> <span class="toc-text">编写文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
                 
             </div>
@@ -272,11 +272,11 @@ toc(page.content, {list_number: true}) //是否显示列表数字</code><br></di
     $(window).scroll(function(){
         var wst =  $(window).scrollTop();
         if ( wst < 118 ) {
-            $('.contentRight').css({'position': 'fixed','top': 100});
+            $('.contentRight').css({'top': 100});
         } else if (wst > $('.contentleft').height() ) {
-            $('.contentRight').css({'position': 'absolute','top': 100});
+            $('.contentRight').css({'top': 100});
         } else if ( 118 < wst < $('.contentleft').height() ) {
-            $('.contentRight').css({'position': 'fixed','top': 30});
+            $('.contentRight').css({'top': 30});
         }
         $(".toc-link").removeClass('toc-link-green');
         var bitch = true;
@@ -288,6 +288,13 @@ toc(page.content, {list_number: true}) //是否显示列表数字</code><br></di
             }
         })
     })
+
+    /*
+        设置目录的位置
+    */
+    var right = $('.postContainer').offset().left
+    $('.contentRight').css({ right: right })
+
     /*
         调整nav样式
     */

@@ -161,7 +161,7 @@ fun.apply(str);  //我是一个函数对象，目前属于：str</code><br></div
         <div class="contentRight rightAnim">
             <div class="tocContent">
                 
-                <strong class="tocTitle">🙊文章目录</strong>
+                <strong class="tocTitle">🙊&nbsp;文章目录</strong>
                     <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#面向对象"><span class="toc-number">1.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象与面向过程的区别"><span class="toc-number">1.1.</span> <span class="toc-text">面向对象与面向过程的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#面向对象两种表达方式"><span class="toc-number">2.</span> <span class="toc-text">面向对象两种表达方式</span></a></li></ol>
                 
             </div>
@@ -234,11 +234,11 @@ fun.apply(str);  //我是一个函数对象，目前属于：str</code><br></div
     $(window).scroll(function(){
         var wst =  $(window).scrollTop();
         if ( wst < 118 ) {
-            $('.contentRight').css({'position': 'fixed','top': 100});
+            $('.contentRight').css({'top': 100});
         } else if (wst > $('.contentleft').height() ) {
-            $('.contentRight').css({'position': 'absolute','top': 100});
+            $('.contentRight').css({'top': 100});
         } else if ( 118 < wst < $('.contentleft').height() ) {
-            $('.contentRight').css({'position': 'fixed','top': 30});
+            $('.contentRight').css({'top': 30});
         }
         $(".toc-link").removeClass('toc-link-green');
         var bitch = true;
@@ -250,6 +250,13 @@ fun.apply(str);  //我是一个函数对象，目前属于：str</code><br></div
             }
         })
     })
+
+    /*
+        设置目录的位置
+    */
+    var right = $('.postContainer').offset().left
+    $('.contentRight').css({ right: right })
+
     /*
         调整nav样式
     */

@@ -447,7 +447,7 @@ table {
 .searchList {
   position: absolute;
   top: 30px;
-  right: 130px;
+  right: 118px;
   height: 145px;
   padding: 0;
   z-index: 20;
@@ -1305,11 +1305,9 @@ table {
 .postContainer .contentRight {
   position: fixed;
   top: 100px;
-  right: 40px;
   display: inline-block;
   width: 250px;
-  right: -300px;
-  opacity: 0.2;
+  opacity: 0;
   -moz-transition: top 1s ease;
   -webkit-transition: top 1s ease;
 }
@@ -1388,25 +1386,21 @@ table {
 }
 @-moz-keyframes rightAnim {
   to {
-    right: 40px;
     opacity: 1;
   }
 }
 @-webkit-keyframes rightAnim {
   to {
-    right: 40px;
     opacity: 1;
   }
 }
 @-o-keyframes rightAnim {
   to {
-    right: 40px;
     opacity: 1;
   }
 }
 @keyframes rightAnim {
   to {
-    right: 40px;
     opacity: 1;
   }
 }
