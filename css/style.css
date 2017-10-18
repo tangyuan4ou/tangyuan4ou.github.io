@@ -176,10 +176,12 @@ table {
 }
 .nav {
   position: relative;
-  margin: 0 auto;
-  width: 1200px;
+  min-width: 1200px;
 }
 .nav .name {
+  position: absolute;
+  top: 0;
+  left: 60px;
   display: inline-block;
   margin-left: 10px;
   margin-top: 5px;
@@ -204,7 +206,7 @@ table {
   height: 30px;
   position: absolute;
   top: 10px;
-  right: 25px;
+  right: 60px;
   cursor: pointer;
 }
 .nav .menu-toggle.on .one {
@@ -231,7 +233,7 @@ table {
 .nav .searchContainer {
   position: absolute;
   top: 20px;
-  right: 90px;
+  right: 118px;
   width: 350px;
   display: inline-block;
 }
@@ -660,10 +662,7 @@ table {
   animation: bAnim 1s ease;
 }
 .archiveCntainer .swap:hover .content {
-  background-color: #e9f1f6;
-  -webkit-animation: contentAnimOn 2s ease forwards;
-  -moz-animation: contentAnimOn 2s ease forwards;
-  animation: contentAnimOn 2s ease forwards;
+  background-color: #161823;
 }
 .archiveCntainer .span {
   position: absolute;
@@ -743,9 +742,10 @@ table {
   height: 396px;
   top: 2px;
   left: 2px;
-  transition: opacity 2s ease;
-  -moz-transition: opacity 2s ease;
-  -webkit-transition: opacity 2s ease;
+  background-color: #161823;
+  transition: all 1.5s ease 0.5s;
+  -moz-transition: all 1.5s ease 0.5s;
+  -webkit-transition: all 1.5s ease 0.5s;
 }
 .archiveCntainer .postBg {
   position: absolute;
