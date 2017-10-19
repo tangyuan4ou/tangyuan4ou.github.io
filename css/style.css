@@ -1188,7 +1188,7 @@ table {
   color: #999;
 }
 .postContainer .postContent {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .postContainer .postContent a {
   text-decoration: none;
@@ -1201,10 +1201,16 @@ table {
 .postContainer .tagContainer .tagCon {
   display: inline-block;
   height: 30px;
+  transition: transform 1s ease;
+  -moz-transition: transform 1s ease;
   -webkit-transition: transform 1s ease;
+  transform: translateX(0px);
+  -moz-transform: translateX(0px);
   -webkit-transform: translateX(0px);
 }
 .postContainer .tagContainer .tagCon:hover {
+  transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
   -webkit-transform: translateX(-10px);
 }
 .postContainer .tagContainer p {
@@ -1223,6 +1229,7 @@ table {
   height: 30px;
   line-height: 30px;
   background: #c7e2de;
+  transform: translateX(-5px) translateY(-9px);
   -moz-transform: translateX(-5px) translateY(-9px);
   -webkit-transform: translateX(-5px) translateY(-9px);
 }
@@ -1308,6 +1315,7 @@ table {
   display: inline-block;
   width: 250px;
   opacity: 0;
+  transition: top 1s ease;
   -moz-transition: top 1s ease;
   -webkit-transition: top 1s ease;
 }
@@ -1418,8 +1426,7 @@ table {
   height: 30px;
   line-height: 30px;
   padding-left: 10px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 0 5px 0 5px;
   background: #afc9c5;
 }
 .code code.has-numbering {

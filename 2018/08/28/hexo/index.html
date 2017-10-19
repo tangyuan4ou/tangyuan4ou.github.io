@@ -252,7 +252,12 @@ toc(page.content, {list_number: true}) //是否显示列表数字</code><br></di
         lineColor: '#161823',
         density: 10000
     });
-    
+
+    /*
+        设置目录的位置
+    */
+    var right = $('.postContainer').offset().left
+    $('.contentRight').css({ right: right })
 
     /*
         目录
@@ -264,36 +269,28 @@ toc(page.content, {list_number: true}) //是否显示列表数字</code><br></di
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top + "px"
         }, {
-            duration: 300,
+            duration: 500,
             easing: "swing"
             });
         return false;
     });
     $(window).scroll(function(){
         var wst =  $(window).scrollTop();
-        if ( wst < 118 ) {
-            $('.contentRight').css({'top': 100});
-        } else if (wst > $('.contentleft').height() ) {
+        if ( wst < 118 || wst > $('.contentleft').height() ) {
             $('.contentRight').css({'top': 100});
         } else if ( 118 < wst < $('.contentleft').height() ) {
             $('.contentRight').css({'top': 30});
         }
         $(".toc-link").removeClass('toc-link-green');
-        var bitch = true;
+        var b = true;
         $('.headerlink').each(function(){
-            if ( wst <= $(this).offset().top && bitch ) {
-                bitch = false;
+            if ( wst <= $(this).offset().top && b ) {
+                b = false;
                 var href = $(this).attr('href');
                 $("[href="+href+"]").addClass('toc-link-green')
             }
         })
     })
-
-    /*
-        设置目录的位置
-    */
-    var right = $('.postContainer').offset().left
-    $('.contentRight').css({ right: right })
 
     /*
         调整nav样式
