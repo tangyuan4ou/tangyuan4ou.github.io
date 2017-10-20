@@ -96,16 +96,16 @@
         $('body').css('height', height-30);
       }
       $('.contactContainer').css('margin-left', left);
-      $('.searchList').css('right', 90+left);
+      $('.searchList').css('right', 115+left);
 
       $(window).scroll(function(){
         var wst = $(window).scrollTop();
         if ( wst == 0 ) {
           $('.menu-section').removeClass('menu-section-animation');
-          $('.searchList').css('right', 90+left);
+          $('.searchList').css('right', 115+left);
         } else {
           $('.menu-section').addClass('menu-section-animation');
-          $('.searchList').css('right', 90);
+          $('.searchList').css('right', 115);
         }
       })
 
