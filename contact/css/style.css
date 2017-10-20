@@ -11,6 +11,8 @@ body {
   opacity: 1;
   border-radius: 6px;
   transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }
 .menu-section-black {
   background: #cccccc;
@@ -22,6 +24,8 @@ body {
   border-radius: 0;
   top: 0;
   animation: menuSectionAnimation 0.5s ease;
+  -moz-animation: menuSectionAnimation 0.5s ease;
+  -webkit-animation: menuSectionAnimation 0.5s ease;
 }
 @keyframes menuSectionAnimation {
   0%{
