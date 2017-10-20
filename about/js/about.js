@@ -18,16 +18,17 @@
   }, 4000);
 
   //根据浏览器滚动加载文字
+  var height = window.innerHeight - 150;
   $(window).scroll(function(){
     var wst = $(window).scrollTop();
     //p动画
     for (var j in arr) {
-      if ( parseInt(arr[j].offset().top)-550 < wst ){
+      if ( parseInt(arr[j].offset().top)-height < wst ){
         arr[j].addClass('pAnimation');
       }
     }
     //img动画
-    if (parseInt($('.headerImg').offset().top)-550 < wst) {
+    if (parseInt($('.headerImg').offset().top)-650 < wst) {
       $('.headerImg').addClass('imgAnimation');
     }
   })

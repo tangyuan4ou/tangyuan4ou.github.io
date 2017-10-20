@@ -198,6 +198,7 @@ table {
   background-color: #000;
   margin: 6px auto;
   backface-visibility: hidden;
+  transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
 }
@@ -210,6 +211,7 @@ table {
   cursor: pointer;
 }
 .nav .menu-toggle.on .one {
+  transform: rotate(45deg) translate(7px, 7px);
   -moz-transform: rotate(45deg) translate(7px, 7px);
   -webkit-transform: rotate(45deg) translate(7px, 7px);
   background-color: #fff;
@@ -218,6 +220,7 @@ table {
   opacity: 0;
 }
 .nav .menu-toggle.on .three {
+  transform: rotate(-45deg) translate(8px, -10px);
   -moz-transform: rotate(-45deg) translate(8px, -10px);
   -webkit-transform: rotate(-45deg) translate(8px, -10px);
   background-color: #fff;
@@ -244,6 +247,7 @@ table {
   border: 0;
   border-bottom: 1px solid #000;
   outline: none;
+  transition: width 0.5s ease;
   -moz-transition: width 0.5s ease;
   -webkit-transition: width 0.5s ease;
 }
@@ -296,8 +300,12 @@ table {
 .menuContainer .menu .list {
   position: absolute;
   top: 0;
+  transform: skewX(-15deg) translateX(-80px);
   -moz-transform: skewX(-15deg) translateX(-80px);
   -webkit-transform: skewX(-15deg) translateX(-80px);
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
   background: #fff;
   text-align: center;
   font-size: 50px;
@@ -322,27 +330,32 @@ table {
 }
 .menuContainer .menu .list:hover {
   opacity: 1;
+  transform: skewX(-15deg) translateX(-90px);
   -moz-transform: skewX(-15deg) translateX(-90px);
   -webkit-transform: skewX(-15deg) translateX(-90px);
 }
 .menuContainer .menu .fadeInUp {
   opacity: 0.8;
+  animation: fadeInUp 2s ease;
   -moz-animation: fadeInUp 2s ease;
   -webkit-animation: fadeInUp 2s ease;
 }
 .menuContainer .menu .fadeInDown {
   opacity: 0;
+  animation: fadeInDown 2s ease;
   -moz-animation: fadeInDown 2s ease;
   -webkit-animation: fadeInDown 2s ease;
 }
 @-moz-keyframes fadeInUp {
   0% {
     opacity: 0;
+    transform: skewX(-15deg) translateX(-100px);
     -moz-transform: skewX(-15deg) translateX(-100px);
     -webkit-transform: skewX(-15deg) translateX(-100px);
   }
   100% {
     opacity: 0.8;
+    transform: skewX(-15deg) translateX(-80px);
     -moz-transform: skewX(-15deg) translateX(-80px);
     -webkit-transform: skewX(-15deg) translateX(-80px);
   }
@@ -350,11 +363,13 @@ table {
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
+    transform: skewX(-15deg) translateX(-100px);
     -moz-transform: skewX(-15deg) translateX(-100px);
     -webkit-transform: skewX(-15deg) translateX(-100px);
   }
   100% {
     opacity: 0.8;
+    transform: skewX(-15deg) translateX(-80px);
     -moz-transform: skewX(-15deg) translateX(-80px);
     -webkit-transform: skewX(-15deg) translateX(-80px);
   }
@@ -362,11 +377,13 @@ table {
 @-o-keyframes fadeInUp {
   0% {
     opacity: 0;
+    transform: skewX(-15deg) translateX(-100px);
     -moz-transform: skewX(-15deg) translateX(-100px);
     -webkit-transform: skewX(-15deg) translateX(-100px);
   }
   100% {
     opacity: 0.8;
+    transform: skewX(-15deg) translateX(-80px);
     -moz-transform: skewX(-15deg) translateX(-80px);
     -webkit-transform: skewX(-15deg) translateX(-80px);
   }
@@ -374,11 +391,13 @@ table {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
+    transform: skewX(-15deg) translateX(-100px);
     -moz-transform: skewX(-15deg) translateX(-100px);
     -webkit-transform: skewX(-15deg) translateX(-100px);
   }
   100% {
     opacity: 0.8;
+    transform: skewX(-15deg) translateX(-80px);
     -moz-transform: skewX(-15deg) translateX(-80px);
     -webkit-transform: skewX(-15deg) translateX(-80px);
   }
@@ -386,11 +405,13 @@ table {
 @-moz-keyframes fadeInDown {
   0% {
     opacity: 0.8;
+    transform: skewX(-15deg) translateX(-80px);
     -moz-transform: skewX(-15deg) translateX(-80px);
     -webkit-transform: skewX(-15deg) translateX(-80px);
   }
   100% {
     opacity: 0;
+    transform: skewX(-15deg) translateX(-100px);
     -moz-transform: skewX(-15deg) translateX(-100px);
     -webkit-transform: skewX(-15deg) translateX(-100px);
   }
@@ -398,11 +419,13 @@ table {
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0.8;
+    transform: skewX(-15deg) translateX(-80px);
     -moz-transform: skewX(-15deg) translateX(-80px);
     -webkit-transform: skewX(-15deg) translateX(-80px);
   }
   100% {
     opacity: 0;
+    transform: skewX(-15deg) translateX(-100px);
     -moz-transform: skewX(-15deg) translateX(-100px);
     -webkit-transform: skewX(-15deg) translateX(-100px);
   }
@@ -410,11 +433,13 @@ table {
 @-o-keyframes fadeInDown {
   0% {
     opacity: 0.8;
+    transform: skewX(-15deg) translateX(-80px);
     -moz-transform: skewX(-15deg) translateX(-80px);
     -webkit-transform: skewX(-15deg) translateX(-80px);
   }
   100% {
     opacity: 0;
+    transform: skewX(-15deg) translateX(-100px);
     -moz-transform: skewX(-15deg) translateX(-100px);
     -webkit-transform: skewX(-15deg) translateX(-100px);
   }
@@ -422,11 +447,13 @@ table {
 @keyframes fadeInDown {
   0% {
     opacity: 0.8;
+    transform: skewX(-15deg) translateX(-80px);
     -moz-transform: skewX(-15deg) translateX(-80px);
     -webkit-transform: skewX(-15deg) translateX(-80px);
   }
   100% {
     opacity: 0;
+    transform: skewX(-15deg) translateX(-100px);
     -moz-transform: skewX(-15deg) translateX(-100px);
     -webkit-transform: skewX(-15deg) translateX(-100px);
   }
@@ -441,6 +468,7 @@ table {
 }
 .menuDown {
   opacity: 0;
+  transition-duration: 2s;
   -moz-transition-duration: 2s;
   -webkit-transition-duration: 2s;
 }
@@ -621,9 +649,9 @@ table {
 .archiveCntainer .archiveSwp {
   width: 1000px;
   margin: 0px auto;
-  -webkit-animation: swpAnim 2s ease;
-  -moz-animation: swpAnim 2s ease;
   animation: swpAnim 2s ease;
+  -moz-animation: swpAnim 2s ease;
+  -webkit-animation: swpAnim 2s ease;
 }
 .archiveCntainer .titleDate {
   margin: 0px 10px 0;
@@ -639,27 +667,31 @@ table {
   margin: 10px 14.9px;
   padding: 0;
   transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
 .archiveCntainer .swap:hover .T {
-  -webkit-animation: tAnim 1s ease;
-  -moz-animation: tAnim 1s ease;
   animation: tAnim 1s ease;
+  -moz-animation: tAnim 1s ease;
+  -webkit-animation: tAnim 1s ease;
 }
 .archiveCntainer .swap:hover .R {
-  -webkit-animation: rAnim 1s ease;
-  -moz-animation: rAnim 1s ease;
   animation: rAnim 1s ease;
+  -moz-animation: rAnim 1s ease;
+  -webkit-animation: rAnim 1s ease;
 }
 .archiveCntainer .swap:hover .L {
-  -webkit-animation: lAnim 1s ease;
-  -moz-animation: lAnim 1s ease;
   animation: lAnim 1s ease;
+  -moz-animation: lAnim 1s ease;
+  -webkit-animation: lAnim 1s ease;
 }
 .archiveCntainer .swap:hover .B {
-  -webkit-animation: bAnim 1s ease;
-  -moz-animation: bAnim 1s ease;
   animation: bAnim 1s ease;
+  -moz-animation: bAnim 1s ease;
+  -webkit-animation: bAnim 1s ease;
 }
 .archiveCntainer .swap:hover .content {
   background-color: #161823;
@@ -672,69 +704,69 @@ table {
   width: 0;
   height: 399px;
   border-top: 1px solid #fff;
-  -webkit-transition: width 1s ease;
-  -moz-transition: width 1s ease;
   transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  -webkit-transition: width 1s ease;
 }
 .archiveCntainer .tt {
   width: 100%;
 }
 .archiveCntainer .tAnim {
-  -webkit-animation: tAnim 1s ease;
-  -moz-animation: tAnim 1s ease;
   animation: tAnim 1s ease;
+  -moz-animation: tAnim 1s ease;
+  -webkit-animation: tAnim 1s ease;
 }
 .archiveCntainer .R {
   width: 299px;
   height: 0;
   border-right: 1px solid #fff;
-  -webkit-transition: height 1s ease;
-  -moz-animation: height 1s ease;
   animation: height 1s ease;
+  -moz-animation: height 1s ease;
+  -webkit-transition: height 1s ease;
 }
 .archiveCntainer .rr {
   height: 100%;
 }
 .archiveCntainer .rAnim {
-  -webkit-animation: rAnim 1s ease;
-  -moz-animation: rAnim 1s ease;
   animation: rAnim 1s ease;
+  -moz-animation: rAnim 1s ease;
+  -webkit-animation: rAnim 1s ease;
 }
 .archiveCntainer .L {
   top: 400px;
   height: 0;
   width: 299px;
   border-left: 1px solid #fff;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
   transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
 }
 .archiveCntainer .ll {
   top: 0;
   height: 100%;
 }
 .archiveCntainer .lAnim {
-  -webkit-animation: lAnim 1s ease;
-  -moz-animation: lAnim 1s ease;
   animation: lAnim 1s ease;
+  -moz-animation: lAnim 1s ease;
+  -webkit-animation: lAnim 1s ease;
 }
 .archiveCntainer .B {
   left: 300px;
   width: 0;
   height: 399px;
   border-bottom: 1px solid #fff;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
   transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
 }
 .archiveCntainer .bb {
   left: 0;
   width: 100%;
 }
 .archiveCntainer .bAnim {
-  -webkit-animation: bAnim 1s ease;
-  -moz-animation: bAnim 1s ease;
   animation: bAnim 1s ease;
+  -moz-animation: bAnim 1s ease;
+  -webkit-animation: bAnim 1s ease;
 }
 .archiveCntainer .content {
   position: absolute;
@@ -756,9 +788,9 @@ table {
   color: #65626b;
   opacity: 0;
   padding: 20px 30px;
-  -webkit-transition: opacity 2s ease;
-  -moz-transition: opacity 2s ease;
   transition: opacity 2s ease;
+  -moz-transition: opacity 2s ease;
+  -webkit-transition: opacity 2s ease;
 }
 .archiveCntainer .postBg span {
   font-size: 14px;
@@ -768,9 +800,9 @@ table {
 }
 .archiveCntainer .contentAnimDown {
   background-color: #e9f1f6;
-  -webkit-animation: contentAnimDown 2s ease forwards;
-  -moz-animation: contentAnimDown 2s ease forwards;
   animation: contentAnimDown 2s ease forwards;
+  -moz-animation: contentAnimDown 2s ease forwards;
+  -webkit-animation: contentAnimDown 2s ease forwards;
 }
 .archiveCntainer .block {
   display: block;
@@ -1122,17 +1154,17 @@ table {
   bottom: 0;
   left: 0;
   background-color: #e9f1f6;
-  -webkit-transform: scaleX(0);
-  -moz-transform: scaleX(0);
   transform: scaleX(0);
-  -webkit-transition: 0.4s ease-in-out;
-  -moz-transition: 0.4s ease-in-out;
+  -moz-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
   transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
 }
 .tagContainer .tags .tagHref:hover::after {
-  -webkit-transform: scaleX(1);
-  -moz-transform: scaleX(1);
   transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -webkit-transform: scaleX(1);
 }
 .main {
   overflow: scroll;
@@ -1172,6 +1204,8 @@ table {
 }
 .postContainer .leftAnim {
   animation: leftAnim 2s ease;
+  -moz-animation: leftAnim 2s ease;
+  -webkit-animation: leftAnim 2s ease;
 }
 .postContainer .postTitle {
   font-size: 30px;
@@ -1334,6 +1368,8 @@ table {
 }
 .postContainer .rightAnim {
   animation: rightAnim 2s ease 2s forwards;
+  -moz-animation: rightAnim 2s ease 2s forwards;
+  -webkit-animation: rightAnim 2s ease 2s forwards;
 }
 .postContainer .tocContent a {
   text-decoration: none;

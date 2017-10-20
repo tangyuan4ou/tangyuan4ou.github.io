@@ -19,29 +19,31 @@ $.ajax({
           }
         }, this);
       }, this);
-      function createList (data) {
-        if ( data.tags.length != 0 ) {
-          var span = '';
-          if ( data.tags.length > 1 ) {
-            span = '';
-            for (var j=0; j<data.tags.length; j++) {
-              span = span + '<span class="span">#' + data.tags[j].name + '</span>';
-            }
-            $('.searchList').append('<li class="blogList"><a href="/'  +data.path + '"></a><h3>'+ data.title +'</h3>'+ span +'</li>')
-          } else {
-            for (var i in data.tags) {
-              span = '<span class="span">#'+ data.tags[i].name +'</span>';
-              $('.searchList').append('<li class="blogList"><a href="/'  +data.path + '"></a><h3>'+ data.title +'</h3>'+ span +'</li>')
-            }
-          }
-        } else {
-          $('.searchList').append('<li class="blogList"><a href="/'  +data.path + '"></a><h3>'+ data.title +'</h3><span>#无标签</span></li>');
-        }
-      }
     })
   }.bind(this),
     error: function(xhr, status, err) {
       console.log('/content.json', status, err.toString());
     }.bind(this)
 })
+
+//添加搜索的li
+function createList (data) {
+  if ( data.tags.length != 0 ) {
+    var span = '';
+    if ( data.tags.length > 1 ) {
+      span = '';
+      for (var j=0; j<data.tags.length; j++) {
+        span = span + '<span class="span">#' + data.tags[j].name + '</span>';
+      }
+      $('.searchList').append('<li class="blogList"><a href="/'  + data.path + '"></a><h3>'+ data.title +'</h3>'+ span +'</li>')
+    } else {
+      for (var i in data.tags) {
+        span = '<span class="span">#'+ data.tags[i].name +'</span>';
+        $('.searchList').append('<li class="blogList"><a href="/'  + data.path + '"></a><h3>'+ data.title +'</h3>'+ span +'</li>')
+      }
+    }
+  } else {
+    $('.searchList').append('<li class="blogList"><a href="/'  + data.path + '"></a><h3>'+ data.title +'</h3><span>#无标签</span></li>');
+  }
+}
 
