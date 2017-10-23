@@ -54,9 +54,8 @@
 
     <div class="contactContainer">
       <h2>&nbsp;&nbsp;&nbsp;&nbsp;本页依然是添加了disqus的评论，所以仍然需要翻墙</h2>
-      <p>这次没有设置弹窗，如果您不翻墙页面不会刷新出来的</p>
-      <p>如果您翻墙了但是没有显示评论框，那么请单击刷新</p>
-      <p>文章数目过多我不一定会看全部评论，留言板的留言我会定期查看的</p>
+      <p>这次没有设置弹窗，如果您不翻墙评论框是不会刷新出来的</p>
+      <p>如果翻墙了但是没有显示评论框，那么请刷新页面</p>
       <p>如果您对我编写的网站感兴趣，欢迎给我留言，大家一起学习成长✌</p>
       <p>如果您不方便翻墙可以单击底导的邮箱icon给我发邮件👇</p>
     </div>
@@ -91,18 +90,18 @@
 
     <script> 
       var height = window.screen.availHeight; 
-      var left = ($('body').width()-1200)/2;
-      if( $('body').height() < height-30 ) {
-        $('body').css('height', height-30);
+      var left = ($('body').width() - 1200) / 2;
+      if( $('body').height() < height - 30 ) {
+        $('body').css('height', height - 30);
       }
       $('.contactContainer').css('margin-left', left);
-      $('.searchList').css('right', 115+left);
+      $('.searchList').css('right', 115 + left);
 
       $(window).scroll(function(){
         var wst = $(window).scrollTop();
         if ( wst == 0 ) {
           $('.menu-section').removeClass('menu-section-animation');
-          $('.searchList').css('right', 115+left);
+          $('.searchList').css('right', 115 + left);
         } else {
           $('.menu-section').addClass('menu-section-animation');
           $('.searchList').css('right', 115);
