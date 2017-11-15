@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>TangYuan</title>
+    <!--<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>-->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+    <body>
+        <script src="/js/jquery.js"></script> 
+        <script src="/js/jquery.particleground.min.js"></script>        
+        <div class="error">
+            <h1>警告！！</h1>
+            <h1>这是警告！！!</h1>
+            <h3>因为您的浏览器屏幕太小，页面展示不下，所以原有DOM元素生气带着它的伙伴离家出走了，如果换成pc端并且单击全屏后再刷新说不定它就回来了</h3>
+            <h3>最后，敬在茫茫网站中能发现我网站的你，祝好，以上。。。</h3>
+            <h6>我的网站我作主，看不懂中文的你们自己翻译吧☠ &nbsp;&nbsp;&nbsp;&nbsp; ---来自一个任性的博主</h6>
+        </div>
+
+        <div class="error2">
+            <h1>警告！！</h1>
+            <h1>这ye是警告！！!</h1>
+            <h3>本人真的不是懒，，，，，（省略一万字）</h3>
+            <h3>好吧编不出理由了，我就是懒，本网站只做了谷歌、火狐、Safari的兼容，谁让这是我私有的呢，任性，哈哈，如果打不开请换一个浏览器，说不定你会喜欢我的创意，没毛病，，，</h3>
+            <h3>浏览器请用最新的版本，否则我也不知道它会不会癫狂，可别尝试用非以上三种浏览器打开网页，就算您能打开，里面的元素不一定表现出什么癫狂的混乱，反正用qq浏览器打开我癫狂了，不说了，去吃药了。</h3>
+            <h3>最后，敬在茫茫网站中能发现我网站的你，祝好，以上。。。</h3>
+            <h6>我的网站我作主，看不懂中文的你们自己翻译吧☠ &nbsp;&nbsp;&nbsp;&nbsp; ---来自一个任性的博主</h6>
+        </div>
+
+        <main class="main">
+            <!--
+    首页menu
+-->
+<div class="menuContainer ">
+  <div class="menuBg"></div>
+    <ul class="menu">
+      <li class="list about">
+        <a href="/">Home</a>
+      </li>
+      <li class="list img ">
+        <a href="/about">about</a>
+      </li>
+      <li class="list blog ">
+        <a href="/archives">archives</a>
+      </li>
+      <li class="list contact ">
+        <a href="/contact">contact</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<!--
+    菜单栏
+-->
+<nav class="menu-section">
+  <div class="nav">
+    <span class="name">Hi friend</span>
+    <div class="searchContainer">
+      <input id="search" class="search" type="text" placeholder="search..." />
+      <button class="searchBtn"><i class="iconfont icon-sousuo"></i></button>
+    </div>
+    <div class="menu-toggle">
+      <div class="navBtn one"></div>
+      <div class="navBtn two"></div>
+      <div class="navBtn three"></div>
+    </div>
+  </div>
+</nav>
+
+<!--
+  菜单栏搜索下拉框
+-->
+<ul class="searchList"></ul>
+<script>
+var youyou = confirm("由于多说的死亡本网站使用了disqus评论系统，需要翻墙才可以显示，如果您可以翻墙那么请开启翻墙软件并单击确定可参与评论，如果没有翻墙软件请单击取消以保正网站的正常加载🌝");
+if (youyou) {
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-tangyuan4ou-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+}
+</script>
+<!--
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//https-tangyuan4ou-github-io.disqus.com/count.js" async></script>
+-->
+<artical class="postSwp">
+  <div class="particleground"></div> 
+    <div class="contentBg"></div>
+    <div class="postContainer">
+        <div class="contentleft leftAnim">
+            <div>
+                <p class="postTitle">react笔记（一）</p>
+            </div>
+            <div class="postMeta">
+                <span class="postTime">2017-11-15</span>
+            </div>
+            <div class="postContent">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;去年用react跟公司开发了一个项目，一直都是师傅带着我，项目是做好了，但是react这还是一直似懂非懂的，前段时间自己编写了一个hexo的主题，用react仿写了一下主题，没写完，但是还是决定抽时间总结一下。</p>
+<h2 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;提到react不得不提到组件化，组件化是react的特性之一，这也是也它风靡一时的原因之一。随着前端的发展，模块化，组件化已经成为一种趋势，它通过拆分dom使开发人员开发和维护网站更便利。</p>
+<h2 id="关于react"><a href="#关于react" class="headerlink" title="关于react"></a>关于react</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;react是facebook开发的开源前端框架，主要针对view层、最近由于和苹果的问题，国内公司陆续中断了关于react的使用，但是我觉得react还是值得一学的，不论生命周期还是props、stste、refs。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;写这个是为了回顾和总结一下最近学习的知识，笔记。</p>
+<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;提笔的时候发现入门有啥，尴尬😅，翻一翻<a href="https://doc.react-china.org/" target="_blank" rel="external">react中文</a>／<a href="https://reactjs.org/" target="_blank" rel="external">react英文</a>文档，天，这是什么，我就半年没有看竟然变成了这样，快速入门不再是当初的简单的几个数据的传递，变成了一个<a href="https://codepen.io/gaearon/pen/gWWZgR?editors=0010" target="_blank" rel="external">游戏</a>,看来我确实荒废太久了。教程和文档写的非常详细，入门很适合看一下。</p>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;React.Component是一个抽象基础类，因此直接引用React.Component几乎没有意义。相反，你通常会继承他，并且至少定义个一render()方法。</p>
+<div class="code"><br><div class="codeHeight"><br>  Component()<br></div><br><code>class Greeting extends Component {
+  render() {
+    return &lt;h1&gt;Hello, Tangyuna&lt;/h1&gt;;
+  }
+}</code><br></div>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;若你仍未使用 ES6，你可以使用 <a href="https://doc.react-china.org/docs/react-without-es6.html" target="_blank" rel="external">create-react-class</a>模块。</p>
+<p>组件的生命周期分为几个阶段：</p>
+<h4 id="装配"><a href="#装配" class="headerlink" title="装配"></a>装配</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;在组件实例被创建和插入DOM时被调用</p>
+<blockquote>
+<p>· constructor()  </p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;组件的构造函数将会在装配之前调用</p>
+<div class="code"><br><div class="codeHeight"><br>  constructor()<br></div><br><code>constructor(props) {
+  super(props)
+  this.state = {
+    color: props.tangyuan
+  }
+  this.handleClick = this.handleClick.bind(this)
+}</code><br></div>
+
+<blockquote>
+<p>· conponentWillMount() </p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;装配发生之前调用。也就是说在render之前调用，在这里设置状态是不会出发重渲的，避免在该方法中引入任何的副作用和订阅。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;这是唯一会在服务端渲染调起的生命周期钩子函数，通常推荐使用constructor()</p>
+<blockquote>
+<p>· render() </p>
+<p>· componentDidMount() </p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在组建装配之后立即调用，初始化使DOM节点应该进行到这里，若需要从远端加载数据，这是一个很适合实现网络请求的地方，可设置状态出发重渲。</p>
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;组件状态更新重新渲染，触发更新。调用一下方法。</p>
+<blockquote>
+<p>· componentWillReceiveProps(nextProps)</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;当组件传入props发生变化时调用，例如： 父组件状态改变，给予组件传入新的props值，用于组件peops变化后，更新state</p>
+<blockquote>
+<p>· shouldComponentUpdate()</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;我接触这个框架的时候react已经在中国大量下架了。所以我也没有深学所有的内容，这部分我也只是了解。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;看过一些文章对这个方法的评价是，可提高性能，但是表现是微乎其微，并且隐藏bug会比较多，但是我并没有测试过。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;编写这点需要使用不可变的状态，immutable.js或者Object.assign都可以。</p>
+<blockquote>
+<p>· componentWillUpdate(nextProps, nextState)</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;当props和state发生变化的时候执行，在render之前，初始化render的时候不执行，在这里不能使用this.props和this.state。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;函数调用以后nextProps和nextState会被设置到this.props和this.state中，然后调用render方法更新洁面</p>
+<blockquote>
+<p>· render()</p>
+<p>· componentDidUpdate(prevProps, prevState)</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;组件更新结束之后执行，在初始化render时不执行</p>
+<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;当组件从DOM中移除的时候调用</p>
+<blockquote>
+<p>· componentWillUnmount()</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;当组件要被从界面上移除的时候，就会调用componentWillUnmount(),在这个函数中，可以做一些组件相关的清理工作，例如取消计时器、网络请求等。</p>
+<h3 id="其他api"><a href="#其他api" class="headerlink" title="其他api"></a>其他api</h3><blockquote>
+<p>· setState()</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设置state，属性值接受函数字符串和数值。</p>
+<blockquote>
+<p>· forceUpdate()</p>
+</blockquote>
+<div class="code"><br><div class="codeHeight"><br>  forceUpdate()<br></div><br><code>this.state.valueWantChange = vale;
+this.forceUpdate(); // this.setState(this.state);</code><br></div>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在以下两种情况会用到 forceUpdate</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;· 手动更改了 state</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;·之后需要触发 render</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;做了除更改props和state之外的操作后，需要render。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;但是使用forceUpdate 会跳过 shouldComponentUpdate 的过程，会触发子组件的所有lifeCycle方法（包括shouldComponentUpdate）从而造成性能的浪费。因此为了组件更加清晰高效，应该避免使用forceUpdate。</p>
+<h3 id="类属性"><a href="#类属性" class="headerlink" title="类属性"></a>类属性</h3><blockquote>
+<p>· defaultProps</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;默认属性</p>
+<div class="code"><br><div class="codeHeight"><br>  defaultProps<br></div><br><code>class Tangyuan extends React.Component {
+  // ...
+}
+
+Tangyuan.defaultProps = {
+  color: &#39;yellow&#39;
+};</code><br></div>
+
+<blockquote>
+<p>· displayName</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;displayName被用在调试信息中。JSX会自动设置该值</p>
+<h3 id="实例属性"><a href="#实例属性" class="headerlink" title="实例属性"></a>实例属性</h3><blockquote>
+<p>· props</p>
+<p>· state</p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上是我关于react生命周期的总结，既是总结也是笔记。方便日后翻阅，没有教学的功能。</p>
+<p>后面会写一下关于props、state和ref的总结。</p>
+
+            </div>
+            <div class="tagContainer">
+                
+                    <div class="tagCon">
+                        <p class="tagArrow"></p>
+                        <p class="tag">#react
+                            <a href="/tags/react"></a>
+                        </p>
+                    </div>
+                
+            </div>
+            <div class="postMessage">
+                
+                
+                    <div class="nextContainer">
+                        <a href="/2017/11/09/波折的两个月/">
+                        <div class="next">
+                            波折的两个月
+                            <i class="iconfont icon-tubiao02"></i>
+                        </div>
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="contentRight rightAnim">
+            <div class="tocContent">
+                
+                <strong class="tocTitle">🙊&nbsp;文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#组件化"><span class="toc-number">1.</span> <span class="toc-text">组件化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于react"><span class="toc-number">2.</span> <span class="toc-text">关于react</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#入门"><span class="toc-number">3.</span> <span class="toc-text">入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生命周期"><span class="toc-number">4.</span> <span class="toc-text">生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#装配"><span class="toc-number">4.0.1.</span> <span class="toc-text">装配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更新"><span class="toc-number">4.0.2.</span> <span class="toc-text">更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#卸载"><span class="toc-number">4.0.3.</span> <span class="toc-text">卸载</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他api"><span class="toc-number">4.1.</span> <span class="toc-text">其他api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类属性"><span class="toc-number">4.2.</span> <span class="toc-text">类属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例属性"><span class="toc-number">4.3.</span> <span class="toc-text">实例属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
+                
+            </div>
+        </div>
+    </div>
+ 
+</artical>
+
+<div id="disqus_thread"></div>
+
+<footer>
+    <div class="footer">
+        <span>©2017-未来&nbsp;♥&nbsp;tangyuan 
+            <a href="mailto:tangyuan_youyou@163.com" onfocus='this.blur();'>📪</a>
+        </span>
+    </div>
+</footer>
+
+<script>
+    /*
+        生成代码背景高亮
+    */
+    //hljs.initHighlightingOnLoad();
+    $('code').each(function(i, block) {
+        var lines = $(this).text().split('\n').length - 1;
+        var $numbering = $('<ul/>').addClass('pre-numbering');
+        $(this).addClass('has-numbering').parent().append($numbering);
+        $(this).parent().css('height', lines*20+50);
+        for(i=1;i<=lines+1;i++){
+            $numbering.append($('<li/>').text(i));
+        }
+    });
+    $('br').remove();
+
+    /*
+        背景canvas
+    */
+    var height = window.screen.availHeight;
+    var postHeight = $('.postSwp').height();
+    var width = $('.postSwp').width();
+    if (height > postHeight) {
+        $('.postSwp').css('height',height); 
+        $('.particleground').css({'height': height, 'width': width});
+    } else {
+        $('.particleground').css({'height': postHeight, 'width': width});
+    }
+
+    $('.particleground').particleground({
+        dotColor: '#161823',
+        lineColor: '#161823',
+        density: 10000
+    });
+
+    /*
+        设置目录的位置
+    */
+    var right = $('.postContainer').offset().left
+    $('.contentRight').css({ right: right })
+
+    /*
+        目录
+    */
+    $(".toc-link").attr('onfocus','this.blur();');
+    $(".toc-link").click(function() {
+        $(".toc-link").removeClass('toc-link-green');
+        $(this).addClass('toc-link-green');
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 500,
+            easing: "swing"
+            });
+        return false;
+    });
+    $(window).scroll(function(){
+        var wst =  $(window).scrollTop();
+        if ( wst < 118 || wst > $('.contentleft').height() ) {
+            $('.contentRight').css({'top': 100});
+        } else if ( 118 < wst < $('.contentleft').height() ) {
+            $('.contentRight').css({'top': 30});
+        }
+        $(".toc-link").removeClass('toc-link-green');
+        var b = true;
+        $('.headerlink').each(function(){
+            if ( wst <= $(this).offset().top && b ) {
+                b = false;
+                var href = $(this).attr('href');
+                $("[href="+href+"]").addClass('toc-link-green')
+            }
+        })
+    })
+
+    /*
+        调整nav样式
+    */
+    //菜单按钮
+    $('.menu-section').css('position', 'absolute');
+    $('.name').text('tangyuan').css('color', '#ffffff');
+    $('.navBtn').css('background-color', '#ffffff');
+
+    //search
+    $('.search').css({'background':'#161823', 'color': '#ffffff', 'border-color':'#ffffff'});
+    $('.searchBtn').css({'color': '#ffffff'});
+
+</script>
+
+        </main>
+
+        <script src="/js/index.js"></script>
+        <script src="/js/canvas.js"></script>
+        <script src="/js/archive.js"></script>
+        <script src="/js/search.js"></script>
+    </body>
+</html>
