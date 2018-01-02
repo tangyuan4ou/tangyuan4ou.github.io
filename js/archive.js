@@ -59,11 +59,10 @@
         $('.tagContent').append('<li class="tagM">menu:</li>').append(a);
         $('.tagHref').click(function(){
           var $this = $(this).text();
-          location.href = href.slice(0,href.indexOf(tagName))+$this;
-          console.log(location.href );
+          tagName = href.slice(href.indexOf('tags'))
+          location.href = href.slice(0,href.indexOf(tagName)) + 'tags/' + $this;
         })
       }
-      
     }.bind(this),
     error: function(xhr, status, err) {
       console.log('/content.json', status, err.toString());

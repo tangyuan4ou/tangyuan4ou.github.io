@@ -1462,7 +1462,7 @@ table {
   height: 30px;
   line-height: 30px;
   padding-left: 10px;
-  border-radius: 0 5px 0 5px;
+  border-radius: 5px 5px 0 0;
   background: #afc9c5;
 }
 .code code.has-numbering {
