@@ -28,12 +28,6 @@
   }
     
   /*
-    设置首页bg高
-  */
-  $('.indexBg').css('height', height );
-  $('.title').css('line-height', height + 'px');
-
-  /*
     首页menu
   */
   var newWidth = width+150;
@@ -49,24 +43,24 @@
   $('.contact').css('left', newWidth-newWidth/4);
 
   //单击a跳转前执行动画
-  $('.list > a').click(function(){
-    var this_ = $(this).parent();
-    this_.siblings().animate({
-      opacity: 0
-    }, 1000,function(){
-      this_.animate({
-        opacity: 0,
-        left: '-=20'
-      },1500,function(){
-        $('.menuBg').animate({
-          opacity: 0
-        },1000,function(){
-          window.location.href = this_.children().attr("href");
-        });
-      });
-    });
-    return false;
-  });
+//   $('.list > a').click(function(){
+//     var this_ = $(this).parent();
+//     this_.siblings().animate({
+//       opacity: 0
+//     }, 1000,function(){
+//       this_.animate({
+//         opacity: 0,
+//         left: '-=20'
+//       },1500,function(){
+//         $('.menuBg').animate({
+//           opacity: 0
+//         },1000,function(){
+//           window.location.href = this_.children().attr("href");
+//         });
+//       });
+//     });
+//     return false;
+//   });
   
 
   /*

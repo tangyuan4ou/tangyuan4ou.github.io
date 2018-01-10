@@ -164,6 +164,27 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: "iconfont";
+  src: url("./../font/fonticonfont.eot?t=1503302983725"); /* IE9*/
+  src: url("./../font/iconfont.eot?t=1503302983725#iefix") format('embedded-opentype'), url("./../font/iconfont.woff?t=1503302983725") format('woff'), url("./../font/iconfont.ttf?t=1503302983725") format('truetype'), url("./../font/iconfont.svg?t=1503302983725#iconfont") format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-tubiao02:before {
+  content: "\e60b";
+}
+.icon-tubiao03:before {
+  content: "\e60c";
+}
+.icon-sousuo:before {
+  content: "\e732";
+}
 .menu-section {
   z-index: 200;
   position: fixed;
@@ -582,27 +603,6 @@ table {
 .errorOn {
   display: block;
 }
-@font-face {
-  font-family: "iconfont";
-  src: url("iconfont.eot?t=1503302983725"); /* IE9*/
-  src: url("iconfont.eot?t=1503302983725#iefix") format('embedded-opentype'), url("iconfont.woff?t=1503302983725") format('woff'), url("iconfont.ttf?t=1503302983725") format('truetype'), url("iconfont.svg?t=1503302983725#iconfont") format('svg'); /* iOS 4.1- */
-}
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-tubiao02:before {
-  content: "\e60b";
-}
-.icon-tubiao03:before {
-  content: "\e60c";
-}
-.icon-sousuo:before {
-  content: "\e732";
-}
 .main {
   position: relative;
   width: 100%;
@@ -611,25 +611,18 @@ table {
 }
 .indexContainer {
   position: relative;
+  width: 100%;
+}
+.t_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 1200px;
-  margin: 0 auto;
 }
-.bgCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.indexBg {
-  position: relative;
-  width: 100%;
-  background-size: 100%;
-}
-.indexBg .title {
-  margin: 0;
-  width: 100%;
-  position: absolute;
-  text-align: center;
+.t_wrap .title {
   font-family: 'Clicker Script';
+  text-align: center;
   font-size: 100px;
   font-weight: bold;
   color: #000;
@@ -650,8 +643,6 @@ table {
   width: 1000px;
   margin: 0px auto;
   animation: swpAnim 2s ease;
-  -moz-animation: swpAnim 2s ease;
-  -webkit-animation: swpAnim 2s ease;
 }
 .archiveCntainer .titleDate {
   margin: 0px 10px 0;
