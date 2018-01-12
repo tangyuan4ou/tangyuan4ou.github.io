@@ -24,12 +24,12 @@
     //p动画
     for (var j in arr) {
       if ( parseInt(arr[j].offset().top)-height < wst ){
-        arr[j].addClass('pAnimation');
+        arr[j].addClass('pAnimate');
       }
     }
     //img动画
     if (parseInt($('.headerImg').offset().top)-650 < wst) {
-      $('.headerImg').addClass('imgAnimation');
+      $('.headerImg').addClass('imgAnimate');
     }
   })
 

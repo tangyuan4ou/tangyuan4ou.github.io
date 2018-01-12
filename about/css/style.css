@@ -80,7 +80,7 @@ body {
 }
 @keyframes draw {
   to{
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 0; 
   }
 }
 .fill {
@@ -110,7 +110,7 @@ to {
   opacity: 0;
   margin: -35px auto 0;
 }
-.imgAnimation {
+.imgAnimate {
   animation: iA 2s ease forwards;
   -moz-animation: iA 2s ease forwards;
   -webkit-animation: iA 2s ease forwards;
@@ -133,7 +133,7 @@ to {
   line-height: 5px;
   opacity: 0;
 }
-.pAnimation {
+.pAnimate {
   animation: pA 1s ease forwards;
   -moz-animation: pA 1s ease forwards;
   -webkit-animation: pA 1s ease forwards;
