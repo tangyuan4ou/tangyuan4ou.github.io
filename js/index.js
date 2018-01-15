@@ -2,8 +2,8 @@
   /*
     获取页面宽高度
   */
-  var height = window.innerHeight;
-  var width = window.innerWidth;
+  var height = window.innerHeight,
+  width = window.innerWidth;
 
   /*
     浏览器宽度小于1200
@@ -31,14 +31,21 @@
     首页menu
   */
   var newWidth = width+150;
-  $('.menuContainer').css('height', height);
-  $('.menuBg').css('height', height);
-  $('.menu').css('height', height);
-  $('.list').css({'width': newWidth/4, 'height': height, 'line-height': height + 'px'});
+  $('.menuContainer').css('height', height>500?height:500);
+  $('.list').css({'width': newWidth/4, 'height': height>500?height:500, 'line-height': (height>500?height:500) + 'px'});
+
+  window.onresize = function() {
+    height = window.innerHeight;
+    width = window.innerWidth;
+
+  $('.menuContainer').css('height', height>500?height:500);
+  $('.list').css({'width': newWidth/4, 'height': height>500?height:500, 'line-height': (height>500?height:500) + 'px'});
+   
+  }
 
 
-  $('.about').css('left', 0);
-  $('.img').css('left', newWidth-newWidth/4*3);
+  $('.home').css('left', 0);
+  $('.about').css('left', newWidth-newWidth/4*3);
   $('.blog').css('left', newWidth-newWidth/4*2);
   $('.contact').css('left', newWidth-newWidth/4);
 
@@ -68,47 +75,27 @@
   */
   $('.menu-toggle').toggle(
     function() {
-      $('.menu-toggle').addClass('on');
-      $('.menu-section').addClass('on');
-      $('.name').css('display', 'none');
-      $('.menuContainer').removeClass('menuDown');
-      $('.menuContainer').addClass('menuContainer2');
+      $('.menu-section').addClass('on').children().children().eq(2).addClass('on');
       $('.searchContainer').addClass('searchDown');
 
-      $('.list').removeClass("fadeInDown");
-      $('.contact').addClass("fadeInUp");
+      $('.name').css('display', 'none');
+      $('.menuContainer').removeClass('menuDown').addClass('menuContainer2');
+
+      $('.menu').removeClass("fadeInDown").addClass("fadeInUp");
       setTimeout(function(){
-        $('.blog').addClass("fadeInUp");
-      },500);
-      setTimeout(function(){
-        $('.img').addClass("fadeInUp");
-      },1000);
-      setTimeout(function(){
-        $('.about').addClass("fadeInUp");
-      },1500);
+        $('.list').addClass('listHover');
+      },2000);
     },
     function() {
-      $('.menu-toggle').removeClass('on');
-      $('.menu-section').removeClass('on');
+      $('.menu-section').removeClass('on').children().children().eq(2).removeClass('on');
 
-      $('.about').removeClass("fadeInUp");
-      $('.about').addClass("fadeInDown");
+      $('.menu').removeClass("fadeInUp").addClass("fadeInDown");
       setTimeout(function(){
-        $('.img').removeClass("fadeInUp").addClass("fadeInDown");
-      },500);
-      setTimeout(function(){
-        $('.blog').removeClass("fadeInUp").addClass("fadeInDown");
-      },1000);
-      setTimeout(function(){
-        $('.contact').removeClass("fadeInUp").addClass("fadeInDown");
-        $('.menuContainer').addClass('menuDown');
-      },1500);
-      setTimeout(function(){
-        $('.menuContainer').removeClass('menuContainer2');
-        $('.menuContainer').removeClass('menuDown');
+        $('.list').removeClass('listHover');
+        $('.menuContainer').removeClass('menuContainer2').removeClass('menuDown');
         $('.name').css('display', 'block');
         $('.searchContainer').removeClass('searchDown');
-      },2000);
+      },2500);
     }
   );
 
