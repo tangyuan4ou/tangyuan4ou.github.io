@@ -30,19 +30,18 @@
   /*
     首页menu
   */
-  var newWidth = width+150;
-  $('.menuContainer').css('height', height>500?height:500);
-  $('.list').css({'width': newWidth/4, 'height': height>500?height:500, 'line-height': (height>500?height:500) + 'px'});
+  var newWidth = width + 150;
+  $('.menuContainer').css('height', height>500 ? height : 500);
+  $('.list').css({'width': newWidth/4, 'height': height>500 ? height : 500, 'line-height': (height>500 ? height : 500) + 'px'});
 
   window.onresize = function() {
     height = window.innerHeight;
     width = window.innerWidth;
 
-  $('.menuContainer').css('height', height>500?height:500);
-  $('.list').css({'width': newWidth/4, 'height': height>500?height:500, 'line-height': (height>500?height:500) + 'px'});
+    $('.menuContainer').css('height', height>500 ? height : 500);
+    $('.list').css({'width': newWidth/4, 'height': height>500 ? height : 500, 'line-height': (height>500 ? height : 500) + 'px'});
    
   }
-
 
   $('.home').css('left', 0);
   $('.about').css('left', newWidth-newWidth/4*3);
