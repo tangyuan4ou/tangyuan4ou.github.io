@@ -3,7 +3,7 @@
     获取页面宽高度
   */
   var height = window.innerHeight,
-  width = window.innerWidth;
+    width = window.innerWidth;
 
   /*
     浏览器宽度小于1200
@@ -30,23 +30,16 @@
   /*
     首页menu
   */
-  var newWidth = width + 150;
   $('.menuContainer').css('height', height>500 ? height : 500);
-  $('.list').css({'width': newWidth/4, 'height': height>500 ? height : 500, 'line-height': (height>500 ? height : 500) + 'px'});
+  $('.list').css('line-height', (height>500 ? height : 500) + 'px').first().css('margin-left', width/12);
 
   window.onresize = function() {
     height = window.innerHeight;
     width = window.innerWidth;
 
     $('.menuContainer').css('height', height>500 ? height : 500);
-    $('.list').css({'width': newWidth/4, 'height': height>500 ? height : 500, 'line-height': (height>500 ? height : 500) + 'px'});
-   
+    $('.list').css('line-height', (height>500 ? height : 500) + 'px').first().css('margin-left', width/12);
   }
-
-  $('.home').css('left', 0);
-  $('.about').css('left', newWidth-newWidth/4*3);
-  $('.blog').css('left', newWidth-newWidth/4*2);
-  $('.contact').css('left', newWidth-newWidth/4);
 
   //单击a跳转前执行动画
 //   $('.list > a').click(function(){
