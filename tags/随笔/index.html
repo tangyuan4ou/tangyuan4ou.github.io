@@ -117,22 +117,13 @@
 <script>
     var height = window.innerHeight - 50;
     var conHeight = $('.archiveCntainer').height();
-    if ( height > conHeight ) {
-        $('.archiveCntainer').css('height', height)
-    } else {
-        $('.archiveCntainer').css('height', conHeight)
-    }
-    /*
-        调整archive页nav样式
-    */
-    //菜单按钮
-    $('.menu-section').css('position', 'absolute');
-    $('.name').text('tangyuan').css('color', '#ffffff');
-    $('.navBtn').css('background-color', '#ffffff');
 
-    //search
-    $('.search').css({'background':'#161823', 'color': '#ffffff', 'border-color':'#ffffff'});
-    $('.searchBtn').css({'color': '#ffffff'});
+    if ( height > conHeight ) $('.archiveCntainer').css('height', height);
+    else $('.archiveCntainer').css('height', conHeight);
+
+    //调整archive页nav样式
+    $('.nav').addClass('bNav').children().first().text('tangyuan');
+
 
 </script>
 

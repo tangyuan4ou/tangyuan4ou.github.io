@@ -31,8 +31,8 @@
     url: '/content.json',
     dataType: 'json',
     success: function(data) {
-      var arr = [];
-      var tagName;
+      var arr = [],
+        tagName;
       data.posts.forEach(function(data){
         data.tags.forEach(function(tag){
           arr.push(tag.name);
@@ -43,8 +43,8 @@
           }
         })
       })
-      var obj = {};
-      var tagArr = [];
+      var obj = {},
+        tagArr = [];
       for (var i=0; i<arr.length; i++) {
         if (!obj[arr[i]]) {
           obj[arr[i]] = true;

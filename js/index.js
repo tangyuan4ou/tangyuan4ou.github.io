@@ -67,26 +67,27 @@
   */
   $('.menu-toggle').toggle(
     function() {
-      $('.menu-section').addClass('on').children().children().eq(2).addClass('on');
-      $('.searchContainer').addClass('searchDown');
+      $('.menu-toggle').addClass('on'); //菜单按钮
+      $('.searchContainer').addClass('searchDown'); //搜索
+      $('.name').css('display', 'none'); //name
 
-      $('.name').css('display', 'none');
+      //menu显示list动效
       $('.menuContainer').removeClass('menuDown').addClass('menuContainer2');
-
       $('.menu').removeClass("fadeInDown").addClass("fadeInUp");
       setTimeout(function(){
         $('.list').addClass('listHover');
       },2000);
     },
     function() {
-      $('.menu-section').removeClass('on').children().children().eq(2).removeClass('on');
-
+      $('.menu-toggle').removeClass('on');
       $('.menu').removeClass("fadeInUp").addClass("fadeInDown");
+      
       setTimeout(function(){
         $('.list').removeClass('listHover');
-        $('.menuContainer').removeClass('menuContainer2').removeClass('menuDown');
+
         $('.name').css('display', 'block');
         $('.searchContainer').removeClass('searchDown');
+        $('.menuContainer').removeClass('menuContainer2').removeClass('menuDown');
       },2500);
     }
   );

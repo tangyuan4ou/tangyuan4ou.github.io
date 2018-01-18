@@ -239,18 +239,18 @@ table {
   background-color: #fff;
 }
 .nav .menu-section.on {
+  display: block;
   z-index: 10;
   width: 100%;
   height: 100%;
-  display: block;
   background-color: #fff;
   position: absolute;
 }
 .nav .searchContainer {
   position: relative;
+  display: inline-block;
   width: 350px;
   margin: 20px 110px 0 0;
-  display: inline-block;
 }
 .nav .search {
   position: absolute;
@@ -283,7 +283,6 @@ table {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 1;
   width: 100%;
   min-width: 1200px;
 }
@@ -308,13 +307,13 @@ table {
 }
 .menuContainer .menu .list {
   width: 35%;
-  transform: skewX(-15deg) translateX(-80px);
-  transition: all 1s ease;
   background: #fff;
   text-align: center;
   font-size: 50px;
   list-style: none;
   opacity: 0;
+  transform: skewX(-15deg) translateX(-80px);
+  transition: all 1s ease;
 }
 .menuContainer .menu .list a {
   display: inline-block;
@@ -335,8 +334,6 @@ table {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 1;
-  width: 100%;
 }
 .menuContainer2 .fadeInUp .contact {
   animation: fadeInUp 2s ease;
@@ -508,6 +505,23 @@ table {
   background: #e9f1f6;
   color: #000;
 }
+.bNav {
+  position: absolute;
+}
+.bNav .name {
+  color: #fff;
+}
+.bNav .navBtn {
+  background-color: #fff;
+}
+.bNav .search {
+  background-color: #161823;
+  border-color: #fff;
+  color: #fff;
+}
+.bNav .searchBtn {
+  color: #fff;
+}
 .page-nav {
   width: 100%;
   height: 60px;
@@ -592,12 +606,10 @@ table {
 }
 .archiveCntainer {
   padding: 50px 0 5px;
-  min-height: 700px;
   background-color: #161823;
 }
 .archiveCntainer .archiveContent {
   height: 100%;
-  min-height: 700px;
   margin: -45px 5px 5px;
   padding-top: 40px;
   border: 1px solid #fff;
@@ -605,7 +617,6 @@ table {
 .archiveCntainer .archiveSwp {
   width: 1000px;
   margin: 0px auto;
-  animation: swpAnim 2s ease;
 }
 .archiveCntainer .titleDate {
   margin: 0px 10px 0;
@@ -621,37 +632,27 @@ table {
   margin: 10px 14.9px;
   padding: 0;
   transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  -webkit-transform: translateY(0px);
   transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -webkit-transition: all 1s ease;
 }
 .archiveCntainer .swap:hover .T {
   animation: tAnim 1s ease;
-  -moz-animation: tAnim 1s ease;
-  -webkit-animation: tAnim 1s ease;
 }
 .archiveCntainer .swap:hover .R {
   animation: rAnim 1s ease;
-  -moz-animation: rAnim 1s ease;
-  -webkit-animation: rAnim 1s ease;
 }
 .archiveCntainer .swap:hover .L {
   animation: lAnim 1s ease;
-  -moz-animation: lAnim 1s ease;
-  -webkit-animation: lAnim 1s ease;
 }
 .archiveCntainer .swap:hover .B {
   animation: bAnim 1s ease;
-  -moz-animation: bAnim 1s ease;
-  -webkit-animation: bAnim 1s ease;
 }
 .archiveCntainer .swap:hover .content {
   background-color: #161823;
 }
 .archiveCntainer .span {
   position: absolute;
+  top: 0;
+  left: 0;
   list-style-type: none;
 }
 .archiveCntainer .T {
@@ -659,32 +660,24 @@ table {
   height: 399px;
   border-top: 1px solid #fff;
   transition: width 1s ease;
-  -moz-transition: width 1s ease;
-  -webkit-transition: width 1s ease;
 }
 .archiveCntainer .tt {
   width: 100%;
 }
 .archiveCntainer .tAnim {
   animation: tAnim 1s ease;
-  -moz-animation: tAnim 1s ease;
-  -webkit-animation: tAnim 1s ease;
 }
 .archiveCntainer .R {
   width: 299px;
   height: 0;
   border-right: 1px solid #fff;
   animation: height 1s ease;
-  -moz-animation: height 1s ease;
-  -webkit-transition: height 1s ease;
 }
 .archiveCntainer .rr {
   height: 100%;
 }
 .archiveCntainer .rAnim {
   animation: rAnim 1s ease;
-  -moz-animation: rAnim 1s ease;
-  -webkit-animation: rAnim 1s ease;
 }
 .archiveCntainer .L {
   top: 400px;
@@ -692,8 +685,6 @@ table {
   width: 299px;
   border-left: 1px solid #fff;
   transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -webkit-transition: all 1s ease;
 }
 .archiveCntainer .ll {
   top: 0;
@@ -701,8 +692,6 @@ table {
 }
 .archiveCntainer .lAnim {
   animation: lAnim 1s ease;
-  -moz-animation: lAnim 1s ease;
-  -webkit-animation: lAnim 1s ease;
 }
 .archiveCntainer .B {
   left: 300px;
@@ -710,8 +699,6 @@ table {
   height: 399px;
   border-bottom: 1px solid #fff;
   transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -webkit-transition: all 1s ease;
 }
 .archiveCntainer .bb {
   left: 0;
@@ -719,19 +706,15 @@ table {
 }
 .archiveCntainer .bAnim {
   animation: bAnim 1s ease;
-  -moz-animation: bAnim 1s ease;
-  -webkit-animation: bAnim 1s ease;
 }
 .archiveCntainer .content {
   position: absolute;
-  width: 296px;
-  height: 396px;
   top: 2px;
   left: 2px;
+  width: 296px;
+  height: 396px;
   background-color: #161823;
   transition: all 1.5s ease 0.5s;
-  -moz-transition: all 1.5s ease 0.5s;
-  -webkit-transition: all 1.5s ease 0.5s;
 }
 .archiveCntainer .postBg {
   position: absolute;
@@ -743,8 +726,6 @@ table {
   opacity: 0;
   padding: 20px 30px;
   transition: opacity 2s ease;
-  -moz-transition: opacity 2s ease;
-  -webkit-transition: opacity 2s ease;
 }
 .archiveCntainer .postBg span {
   font-size: 14px;
@@ -755,8 +736,6 @@ table {
 .archiveCntainer .contentAnimDown {
   background-color: #e9f1f6;
   animation: contentAnimDown 2s ease forwards;
-  -moz-animation: contentAnimDown 2s ease forwards;
-  -webkit-animation: contentAnimDown 2s ease forwards;
 }
 .archiveCntainer .block {
   display: block;
@@ -772,38 +751,6 @@ table {
   padding-top: 50px;
   text-align: center;
   height: 200px;
-}
-@-moz-keyframes swpAnim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes swpAnim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes swpAnim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes swpAnim {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 @-moz-keyframes tAnim {
   0% {
@@ -1088,9 +1035,9 @@ table {
 }
 .tagContainer .tags {
   position: relative;
+  display: inline-block;
   margin: 15px 10px;
   padding: 0px 10px;
-  display: inline-block;
   font-size: 22px;
   text-align: center;
   list-style-type: none;
@@ -1102,23 +1049,17 @@ table {
 }
 .tagContainer .tags .tagHref::after {
   position: absolute;
+  bottom: 0;
+  left: 0;
   content: '';
   width: 100%;
   height: 2px;
-  bottom: 0;
-  left: 0;
   background-color: #e9f1f6;
   transform: scaleX(0);
-  -moz-transform: scaleX(0);
-  -webkit-transform: scaleX(0);
   transition: 0.4s ease-in-out;
-  -moz-transition: 0.4s ease-in-out;
-  -webkit-transition: 0.4s ease-in-out;
 }
 .tagContainer .tags .tagHref:hover::after {
   transform: scaleX(1);
-  -moz-transform: scaleX(1);
-  -webkit-transform: scaleX(1);
 }
 .main {
   overflow: scroll;
