@@ -198,6 +198,7 @@ table {
 .nav {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   min-width: 1200px;
 }
 .nav .name {

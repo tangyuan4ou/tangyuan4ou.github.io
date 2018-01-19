@@ -16,31 +16,23 @@ body {
   width: 0;
   border-top: 1px solid rgb(233, 241, 246);
   animation: tA 1s ease 1s forwards;
-  -moz-animation: tA 1s ease 1s forwards;
-  -webkit-animation: tA 1s ease 1s forwards;
 }
 .aR {
   height: 0;
   border-right: 1px solid rgb(233, 241, 246);
   animation: rA 1s ease 1s forwards;
-  -moz-animation: rA 1s ease 1s forwards;
-  -webkit-animation: rA 1s ease 1s forwards;
 }
 .aB {
   left: 953px;
   width: 0;
   border-bottom: 1px solid rgb(233, 241, 246);
   animation: bA 1s ease 1s forwards;
-  -moz-animation: bA 1s ease 1s forwards;
-  -webkit-animation: bA 1s ease 1s forwards;
 }
 .aL {
   height: 0;
   top: 100%;
   border-left: 1px solid rgb(233, 241, 246);
   animation: lA 1s ease 1s forwards;
-  -moz-animation: lA 1s ease 1s forwards;
-  -webkit-animation: lA 1s ease 1s forwards;
 }
 @keyframes tA {
   to {
@@ -72,11 +64,7 @@ body {
   stroke-dashoffset: 1310;
   fill: #161823;
   transition: fill 2s ease;
-  -moz-transition: fill 2s ease;
-  -webkit-transition: fill 2s ease;
   animation: draw 6s ease 2s forwards;
-  -moz-animation: draw 6s ease 2s forwards;
-  -webkit-animation: draw 6s ease 2s forwards;
 }
 @keyframes draw {
   to{
@@ -87,8 +75,6 @@ body {
   stroke-dasharray: 1310; /*定义描边的虚线长度，如果提供奇数个，则会自动复制该值成偶数*/
   stroke-dashoffset: 1310; /*定义虚线描边的偏移量（在路径开始的前面，看不到）*/
   animation: fill 5s ease 2s forwards;
-  -moz-animation: fill 5s ease 2s forwards;
-  -webkit-animation: fill 5s ease 2s forwards;
 }
 @keyframes fill {
 to {
@@ -102,8 +88,6 @@ to {
   background: rgb(233, 241, 246);
   opacity: 0;
   transition: opacity 2s ease 2s;
-  -moz-transition: opacity 2s ease 2s;
-  -webkit-transition: opacity 2s ease 2s;
 }
 .headerImg {
   width: 200px;
@@ -112,8 +96,6 @@ to {
 }
 .imgAnimate {
   animation: iA 2s ease forwards;
-  -moz-animation: iA 2s ease forwards;
-  -webkit-animation: iA 2s ease forwards;
 }
 @keyframes iA {
   to {
@@ -135,8 +117,6 @@ to {
 }
 .pAnimate {
   animation: pA 1s ease forwards;
-  -moz-animation: pA 1s ease forwards;
-  -webkit-animation: pA 1s ease forwards;
 }
 @keyframes pA {
   to {
